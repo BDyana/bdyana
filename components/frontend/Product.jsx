@@ -28,7 +28,7 @@ export default function Product({ product }) {
       </Link>
       <div className="px-1 lg:px-2">
         <Link href={`/products/${product.slug}`}>
-          <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-1">
+          <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
             {product.title}
           </h4>
           {/* <p>{category.title}</p> */}
