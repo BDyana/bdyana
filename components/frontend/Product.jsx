@@ -36,9 +36,11 @@ export default function Product({ product }) {
         <div className="flex items-center justify-between gap-2 pb-1 dark:text-slate-200 text-slate-800">
           <div>
             <p className="leading-none font-medium">৳ {product?.salePrice}</p>
-            <del className="text-slate-500 text-sm mr-2">
-              ৳ {product?.productPrice}
-            </del>
+            {product?.productPrice > product?.salePrice && (
+              <del className="text-slate-500 text-sm mr-2">
+                ৳ {product?.productPrice}
+              </del>
+            )}
             {product?.productPrice > product?.salePrice && (
               <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
                 -
