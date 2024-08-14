@@ -1,24 +1,13 @@
 "use client";
+import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import { addToCart } from "@/redux/slices/cartSlice";
-import { ShoppingCart  } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
-const normalPrice = `normalPrice`; // Original price
-const discountedPrice = `discountAmount`; // Discounted price
-const percentage = calculateDiscountPercentage(discountedPrice, normalPrice);
-
-function calculateDiscountPercentage(discountedPrice, normalPrice) {
-  if (normalPrice <= 0) {
-      throw new Error("Normal price must be greater than zero.");
-  }
-  const discountAmount = normalPrice - discountedPrice;
-  const discountPercentage = (discountAmount / normalPrice) * 100;
-  return discountPercentage.toFixed(0);
-}
 export default function Product({ product }) {
   const dispatch = useDispatch();
   function handleAddToCart() {
@@ -46,11 +35,22 @@ export default function Product({ product }) {
         </Link>
         <div className="flex items-center justify-between gap-2 pb-1 dark:text-slate-200 text-slate-800">
           <div>
-              <p className="leading-none font-medium">৳ {product?.salePrice}</p>
+            <p className="leading-none font-medium">৳ {product?.salePrice}</p>
+            {product?.productPrice > product?.salePrice && (
               <del className="text-slate-500 text-sm mr-2">
                 ৳ {product?.productPrice}
               </del>
-              <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">-{percentage}%</h5>
+            )}
+            {product?.productPrice > product?.salePrice && (
+              <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
+                -
+                {calculateDiscountPercentage(
+                  product?.productPrice,
+                  product?.salePrice
+                )}
+                %
+              </h5>
+            )}
           </div>
           <button
             onClick={() => handleAddToCart()}

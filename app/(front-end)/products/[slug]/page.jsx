@@ -1,3 +1,4 @@
+import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import AddToCartButton from "@/components/frontend/AddToCartButton";
 import Breadcrumb from "@/components/frontend/Breadcrumb";
 import CategoryCarousel from "@/components/frontend/CategoryCarousel";
@@ -62,10 +63,14 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 ৳ {product.productPrice}
               </del>
             </div>
-            <p className="flex items-center bg-lime-200 py-2 px-4 rounded-full text-slate-900 ">
+            <div className="flex items-center bg-lime-200 py-2 px-4 rounded-full text-slate-900 ">
               <Tag className="w-5 h-5 text-slate-400 me-2" />
-              <h4>Save <b>50%</b></h4>
-            </p>
+              <h4>Save <b>
+                {calculateDiscountPercentage(
+                  product?.productPrice,
+                  product?.salePrice
+                )}%</b></h4>
+            </div>
           </div>
           <div className="flex justify-between items-center py-6">
             <AddToCartButton product={product} />

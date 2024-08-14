@@ -30,7 +30,7 @@ export default function MarketsCarousel({ markets }) {
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
       infinite={true}
-      autoPlay={true}
+      autoPlay={false}
       autoPlaySpeed={3000}
       keyBoardControl={true}
       customTransition="transform 1000ms ease-in-out"
