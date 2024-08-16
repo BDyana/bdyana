@@ -37,7 +37,7 @@ export default function Product({ product }) {
           <div>
             <p className="leading-none font-medium">৳ {product?.salePrice}</p>
             {product?.productPrice > product?.salePrice && (
-              <del className="text-slate-500 text-sm mr-2">
+              <del className="text-slate-500 text-sm mr-1 lg:mr-2">
                 ৳ {product?.productPrice}
               </del>
             )}
