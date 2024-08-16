@@ -31,10 +31,10 @@ export default async function Home() {
       })}
 
       <MarketList />
-      {/* <CommunityTrainings
+      <CommunityTrainings
         title="Featured Trainings"
         trainings={trainings.slice(0, 3)}
-      /> */}
+      />
     </div>
   );
 }
