@@ -89,7 +89,7 @@ export async function GET(request) {
   const min = request.nextUrl.searchParams.get("min");
   const max = request.nextUrl.searchParams.get("max");
   const page = request.nextUrl.searchParams.get("page") || 1;
-  const pageSize = 12;
+  const pageSize = 40;
   console.log(sortBy, categoryId);
   let where = {
     categoryId,
