@@ -16,7 +16,7 @@ export default function PriceFilter({ slug, isSearch }) {
   console.log(isSearch, search);
   const priceRanges = [
     {
-      display: "under 300",
+      display: "Under 300",
       max: 300,
     },
     {
@@ -52,13 +52,13 @@ export default function PriceFilter({ slug, isSearch }) {
   return (
     <div>
       <div className="">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-3">
           <h2 className="text-xl font-medium">Price </h2>
           <Link
-            className="text-white bg-lime-700 hover:bg-lime-800 focus:ring-4 focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800"
+            className="text-sm text-white font-medium bg-gray-700 hover:bg-gray-800 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 rounded px-4 py-2 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800 transition-all"
             href={isSearch ? `/search?search=${search}` : `/category/${slug}`}
           >
-            Reset Filters
+            Reset
           </Link>
         </div>
 
@@ -91,11 +91,11 @@ export default function PriceFilter({ slug, isSearch }) {
                     range.max &&
                     range.min == minParam &&
                     range.max == maxParam)
-                    ? "flex gap-2 items-center text-lime-500"
-                    : "flex gap-2 items-center"
+                    ? "text-sm flex gap-2 items-center font-medium"
+                    : "text-sm flex gap-2 items-center"
                 }`}
               >
-                <Circle className="w-4 h-4 flex-shrink-0" />
+                <Circle className="w-3 h-3 flex-shrink-0"/>
                 {range.display}
               </Link>
             );
@@ -107,7 +107,7 @@ export default function PriceFilter({ slug, isSearch }) {
         ) : (
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-3 gap-4 my-4"
+            className="grid grid-cols-1 gap-3 my-6"
           >
             <div className="col-span-1">
               <input
@@ -115,7 +115,7 @@ export default function PriceFilter({ slug, isSearch }) {
                 type="number"
                 id="cvv-input"
                 aria-describedby="helper-text-explanation"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-lime-500 focus:border-lime-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-500 dark:focus:border-lime-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-gray-200 focus:border-gray-300 block w-full py-2 px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-500 dark:focus:border-lime-500"
                 placeholder="min"
               />
             </div>
@@ -125,14 +125,14 @@ export default function PriceFilter({ slug, isSearch }) {
                 type="number"
                 id="cvv-input"
                 aria-describedby="helper-text-explanation"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-lime-500 focus:border-lime-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-500 dark:focus:border-lime-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-gray-200 focus:border-gray-300 block w-full py-2 px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-500 dark:focus:border-lime-500"
                 placeholder="Max"
               />
             </div>
             <div className="col-span-1">
               <button
                 type="submit"
-                className="text-white bg-lime-700 hover:bg-lime-800 focus:ring-4 focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800"
+                className="text-sm text-white font-medium bg-gray-700 hover:bg-gray-800 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 rounded px-4 py-2 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800 transition-all"
               >
                 Go
               </button>

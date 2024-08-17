@@ -41,14 +41,14 @@ export default function Sorting({ title, slug, isSearch }) {
       </h2>
       <div className="flex text-sm items-center gap-3">
         <p>Sort by:</p>
-        <div className="flex items-center">
+        <div className="flex items-center gap-1">
           {sortingLinks.map((link, i) => {
             return (
               <Link
                 key={i}
                 className={`${
                   link.sort === sortParam
-                    ? "bg-slate-800 px-2 py-1 border border-lime-400 text-lime-400"
+                    ? "text-sm text-white font-medium bg-gray-700 px-3 py-1 border border-gray-700"
                     : "border border-slate-500 px-2 py-1"
                 }`}
                 href={link.href}
