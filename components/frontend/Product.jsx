@@ -54,7 +54,7 @@ export default function Product({ product }) {
           </div>
           <button
             onClick={() => handleAddToCart()}
-            className="flex items-center hover:bg-gray-100 px-3 py-3 rounded-full text-black"
+            className="flex items-center hover:bg-gray-100 p-2 lg:p-3 rounded-full text-black"
           >
             <ShoppingCart size={17} />
           </button>
