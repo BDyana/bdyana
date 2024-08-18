@@ -18,7 +18,7 @@ export default async function page() {
         linkTitle="Add Category"
       />
 
-      <div className="py-0">
+      <div className="">
         <DataTable data={categories} columns={columns} />
       </div>
     </div>

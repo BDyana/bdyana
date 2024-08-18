@@ -5,6 +5,7 @@ import Heading from "@/components/backoffice/Heading";
 import LargeCards from "@/components/backoffice/LargeCards";
 import SmallCards from "@/components/backoffice/SmallCards";
 import UserDashboard from "@/components/backoffice/UserDashboard";
+import Status from "@/components/backoffice/status";
 import { authOptions } from "@/lib/authOptions";
 import { getData } from "@/lib/getData";
 import { getServerSession } from "next-auth";

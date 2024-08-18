@@ -15,7 +15,7 @@ export default async function page() {
         href="/dashboard/banners/new"
         linkTitle="Add Banner"
       />
-      <div className="py-8">
+      <div className="">
         <DataTable data={banners} columns={columns} />
       </div>
     </div>
