@@ -39,7 +39,7 @@ export default function Sorting({ title, slug, isSearch }) {
         {isSearch && "Search Results - "}
         {title}
       </h2>
-      <div className="flex text-sm items-center gap-3 md:mt-5">
+      <div className="flex text-sm items-center gap-3 lg:mt-0 mt-5">
         <p>Sort by:</p>
         <div className="flex items-center gap-1">
           {sortingLinks.map((link, i) => {

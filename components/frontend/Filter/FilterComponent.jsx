@@ -19,7 +19,7 @@ export default function FilterComponent({ category, products }) {
         <div className="col-span-2 hidden md:flex">
           <Filters slug={slug} isSearch={category?.isSearch} />
         </div>
-        <div className="col-span-10">
+        <div className="lg:col-span-10 col-span-12">
           <FilteredProducts
             isSearch={category?.isSearch}
             productCount={productCount}
