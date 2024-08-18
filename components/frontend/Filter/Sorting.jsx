@@ -33,13 +33,13 @@ export default function Sorting({ title, slug, isSearch }) {
     },
   ];
   return (
-    <div className="flex items-center justify-between">
+    <div className="lg:flex items-center justify-between">
       {/* <h2 className="text-2xl">Search Results - Electronic</h2> */}
       <h2 className="text-2xl font-medium ">
         {isSearch && "Search Results - "}
         {title}
       </h2>
-      <div className="flex text-sm items-center gap-3">
+      <div className="flex text-sm items-center gap-3 md:mt-5">
         <p>Sort by:</p>
         <div className="flex items-center gap-1">
           {sortingLinks.map((link, i) => {
