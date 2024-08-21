@@ -10,6 +10,7 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CountdownTimer from '../../../../components/frontend/CountdownTimer';
 
 export default async function ProductDetailPage({ params: { slug } }) {
   const product = await getData(`products/product/${slug}`);
@@ -20,10 +21,11 @@ export default async function ProductDetailPage({ params: { slug } }) {
   const products = categoryProducts.filter((product) => product.id !== id);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const urlToShare = `${baseUrl}/products/${slug}`;
+  const targetDate = '2024-09-01T00:00:00Z';
   return (
     <div>
       <Breadcrumb />
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 lg:col-span-4">
             <ProductImageCarousel
               productImages={product.productImages}
@@ -55,6 +57,10 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <b>Stock</b>: {product.productStock}
               </p>
             </div>
+          </div>
+          <div>
+            <h1>Welcome to My Store!</h1>
+            <CountdownTimer targetDate={targetDate} />
           </div>
           <div className="flex items-center justify-between gap-4 pt-4 border-b border-gray-300 pb-4">
             <div className="items-center gap-4">
