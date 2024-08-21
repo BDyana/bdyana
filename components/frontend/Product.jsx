@@ -1,6 +1,7 @@
 "use client";
 import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import { addToCart } from "@/redux/slices/cartSlice";
+import ProgressBar from "@ramonak/react-progress-bar";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,8 +16,11 @@ export default function Product({ product }) {
     dispatch(addToCart(product));
     toast.success("Product added Successfully");
   }
+  const progress = (product.productLeft / product.productStock) * 100;
+  console.log(progress);
+
   return (
-    <div className="mb-2 mx-1 bg-white dark:bg-slate-900 overflow-hidden border hover:shadow">
+    <div className="mb-2 mx-1 bg-white dark:bg-slate-900 overflow-hidden border hover:shadow  ">
       <Link href={`/products/${product.slug}`}>
         <Image
           src={product.imageUrl}
@@ -31,7 +35,6 @@ export default function Product({ product }) {
           <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-1">
             {product.title}
           </h4>
-          {/* <p>{category.title}</p> */}
         </Link>
         <div className="flex items-center justify-between gap-2 pb-1 dark:text-slate-200 text-slate-800">
           <div>
@@ -51,6 +54,9 @@ export default function Product({ product }) {
                 %
               </h5>
             )}
+            <p className="text-gray-500 dark:text-gray-600 text-xs mt-4">
+              {product?.productStock} items left
+            </p>
           </div>
           <button
             onClick={() => handleAddToCart()}
@@ -59,6 +65,15 @@ export default function Product({ product }) {
             <ShoppingCart size={17} />
           </button>
         </div>
+
+        <ProgressBar
+          completed={`${progress}`}
+          isLabelVisible={false}
+          bgColor={
+            progress >= 70 ? "#00b289" : progress >= 50 ? "#d4851e" : "#f56565"
+          }
+          height={10}
+        />
       </div>
     </div>
   );

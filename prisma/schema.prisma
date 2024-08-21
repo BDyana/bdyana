@@ -17,11 +17,11 @@ model Coupon {
   couponCode String
   expiryDate DateTime
   isActive   Boolean
-  user   User   @relation(fields: [vendorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  vendorId String @db.ObjectId
+  user       User     @relation(fields: [vendorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  vendorId   String   @db.ObjectId
 
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Banner {
@@ -91,6 +91,7 @@ model Product {
   wholesaleQty   Int?
   productStock   Int?
   qty            Int?
+  productLeft    Int?
   tags           String[]
   categoryId     String   @db.ObjectId
   category       Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
@@ -141,9 +142,9 @@ model User {
   password          String
   emailVerified     Boolean        @default(false)
   products          Product[]
-  coupons          Coupon[]
+  coupons           Coupon[]
   role              UserRole       @default(USER)
-  plan             String?        
+  plan              String?
   verificationToken String?
   status            Boolean        @default(false)
   farmerProfile     FarmerProfile?
@@ -151,27 +152,27 @@ model User {
   orders            Order[] //User can have multiple Orders
   createdAt         DateTime       @default(now())
   updatedAt         DateTime       @updatedAt
-  sales              Sale[]
+  sales             Sale[]
 }
 
 // Model for normal user profile
 model UserProfile {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  userId      String    @unique @db.ObjectId
-   // Personal Details
-  name     String?
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String    @unique @db.ObjectId
+  // Personal Details
+  name          String?
   firstName     String?
   lastName      String?
   email         String?
-  username         String?
+  username      String?
   phone         String?
   // shipping details
   streetAddress String?
   city          String?
   country       String?
   district      String?
-  dateOfBirth DateTime?
-  profileImage String?
+  dateOfBirth   DateTime?
+  profileImage  String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
@@ -213,8 +214,8 @@ model Order {
   city          String?
   country       String?
   apartment     String?
-      state     String?
-      zip       String?
+  state         String?
+  zip           String?
   shippingCost  Float?
   orderNumber   String?
   //Payment Method
