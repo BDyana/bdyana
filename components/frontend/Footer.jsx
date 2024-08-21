@@ -1,7 +1,7 @@
 import HelpModal from "./HelpModal";
 const Footer = () => {
   return (
-    <section className="py-6 bg-gray-50 sm:pt-16 lg:pt-18">
+    <section className="pt-8 lg:pt-18 pb-4 lg:pb-6 bg-gray-50">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-8 lg:gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
@@ -94,7 +94,7 @@ const Footer = () => {
               Company
             </p>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-4 lg:mt-6 lg:space-y-4 space-y-2">
               <li>
                 <a
                   href="#"
@@ -146,7 +146,7 @@ const Footer = () => {
               Help
             </p>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-4 lg:mt-6 lg:space-y-4 space-y-2">
               <li>
               <HelpModal />
               </li>
@@ -191,7 +191,7 @@ const Footer = () => {
               Subscribe to newsletter
             </p>
 
-            <form action="#" method="POST" className="mt-6 flex gap-2">
+            <form action="#" method="POST" className="mt-4 lg:mt-6 flex gap-2">
               <div>
                 <label htmlFor="email" className="sr-only">
                   Email
@@ -215,7 +215,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="mt-8 lg:mt-12 mb-6 border-gray-200" />
+        <hr className="mt-6 mb-4 lg:mt-12 lg:mb-6 border-gray-200" />
 
         <p className="text-sm text-center text-gray-600">
           © Copyright 2024, All Rights Reserved by <b>BDyana</b>

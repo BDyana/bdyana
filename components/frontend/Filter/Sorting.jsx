@@ -33,22 +33,22 @@ export default function Sorting({ title, slug, isSearch }) {
     },
   ];
   return (
-    <div className="flex items-center justify-between">
+    <div className="lg:flex items-center justify-between">
       {/* <h2 className="text-2xl">Search Results - Electronic</h2> */}
       <h2 className="text-2xl font-medium ">
         {isSearch && "Search Results - "}
         {title}
       </h2>
-      <div className="flex text-sm items-center gap-3">
+      <div className="flex text-sm items-center gap-3 lg:mt-0 mt-5">
         <p>Sort by:</p>
-        <div className="flex items-center">
+        <div className="flex items-center gap-1">
           {sortingLinks.map((link, i) => {
             return (
               <Link
                 key={i}
                 className={`${
                   link.sort === sortParam
-                    ? "bg-slate-800 px-2 py-1 border border-lime-400 text-lime-400"
+                    ? "text-sm text-white font-medium bg-gray-700 px-3 py-1 border border-gray-700"
                     : "border border-slate-500 px-2 py-1"
                 }`}
                 href={link.href}

@@ -32,7 +32,7 @@ export default function Product({ product }) {
       </Link>
       <div className="px-1 lg:px-2">
         <Link href={`/products/${product.slug}`}>
-          <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-1">
+          <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
             {product.title}
           </h4>
         </Link>
@@ -40,7 +40,7 @@ export default function Product({ product }) {
           <div>
             <p className="leading-none font-medium">৳ {product?.salePrice}</p>
             {product?.productPrice > product?.salePrice && (
-              <del className="text-slate-500 text-sm mr-2">
+              <del className="text-slate-500 text-sm mr-1 lg:mr-2">
                 ৳ {product?.productPrice}
               </del>
             )}
@@ -60,7 +60,7 @@ export default function Product({ product }) {
           </div>
           <button
             onClick={() => handleAddToCart()}
-            className="flex items-center hover:bg-gray-100 px-3 py-3 rounded-full text-black"
+            className="flex items-center hover:bg-gray-100 p-2 lg:p-3 rounded-full text-black"
           >
             <ShoppingCart size={17} />
           </button>

@@ -12,7 +12,7 @@ import CategoryGrid from "@/components/frontend/CategoryGrid";
 export default async function Home() {
   const categoriesData = await getData("categories");
   const categories = categoriesData.filter((category) => {
-    return category.title === "Gadget & Accessories" || category.title === "Beauty & Bodycare" || category.title === "Android Phone" || category.title === "Mens & Boys Fashion" || category.title === "Grocery"});
+    return category.title === "Beauty & Bodycare" || category.title === "Gadget & Accessories" || category.title === "Grocery" });
 
   const trainings = await getData("trainings");
   const session = await getServerSession(authOptions);

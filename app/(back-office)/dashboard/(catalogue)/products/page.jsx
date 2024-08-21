@@ -29,7 +29,7 @@ export default async function page() {
         href="/dashboard/products/new"
         linkTitle="Add Product"
       />
-      <div className="py-8">
+      <div className="">
         {role === "ADMIN" ? (
           <DataTable data={allProducts} columns={columns} />
         ) : (

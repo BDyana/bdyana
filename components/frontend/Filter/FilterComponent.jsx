@@ -11,15 +11,15 @@ export default function FilterComponent({ category, products }) {
   const productCount = category.products.length;
   return (
     <div>
-      <div className="bg-white space-y-6 text-slate-900 py-8 px-4 ">
+      <div className="bg-white space-y-2 text-slate-900 py-6">
         <Breadcrumb title={title} resultCount={productCount} />
         <Sorting isSearch={category?.isSearch} title={title} slug={slug} />
       </div>
       <div className="grid grid-cols-12 py-8 gap-4">
-        <div className="col-span-3">
+        <div className="col-span-2 hidden md:flex">
           <Filters slug={slug} isSearch={category?.isSearch} />
         </div>
-        <div className="col-span-9">
+        <div className="lg:col-span-10 col-span-12">
           <FilteredProducts
             isSearch={category?.isSearch}
             productCount={productCount}

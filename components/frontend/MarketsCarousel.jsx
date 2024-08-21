@@ -9,7 +9,7 @@ export default function MarketsCarousel({ markets }) {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 6,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -29,12 +29,12 @@ export default function MarketsCarousel({ markets }) {
       showDots={false}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
-      infinite={true}
-      autoPlay={true}
-      autoPlaySpeed={3000}
+      infinite={false}
+      autoPlay={false}
+      autoPlaySpeed={1000}
       keyBoardControl={true}
       customTransition="transform 1000ms ease-in-out"
-      transitionDuration={500}
+      transitionDuration={300}
       containerClass="carousel-container"
       removeArrowOnDeviceType={["tablet", "mobile"]}
       // deviceType={}

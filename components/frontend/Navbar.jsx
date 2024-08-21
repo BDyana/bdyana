@@ -35,7 +35,7 @@ export default function Navbar() {
             <ContactInfo/>
           </div>
           <div>
-            <div className="flex gap-1 lg:gap-2">
+            <div className="flex gap-1 lg:gap-2 ml-2">
               {status === "unauthenticated" ? (
                 <Link
                   href="/login"

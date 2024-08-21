@@ -1,3 +1,4 @@
+import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import AddToCartButton from "@/components/frontend/AddToCartButton";
 import Breadcrumb from "@/components/frontend/Breadcrumb";
 import CategoryCarousel from "@/components/frontend/CategoryCarousel";
@@ -9,6 +10,7 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CountdownTimer from '../../../../components/frontend/CountdownTimer';
 
 export default async function ProductDetailPage({ params: { slug } }) {
   const product = await getData(`products/product/${slug}`);
@@ -19,10 +21,11 @@ export default async function ProductDetailPage({ params: { slug } }) {
   const products = categoryProducts.filter((product) => product.id !== id);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const urlToShare = `${baseUrl}/products/${slug}`;
+  const targetDate = '2024-09-01T00:00:00Z';
   return (
     <div>
       <Breadcrumb />
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 lg:col-span-4">
             <ProductImageCarousel
               productImages={product.productImages}
@@ -55,6 +58,10 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </p>
             </div>
           </div>
+          <div>
+            <h1>Welcome to My Store!</h1>
+            <CountdownTimer targetDate={targetDate} />
+          </div>
           <div className="flex items-center justify-between gap-4 pt-4 border-b border-gray-300 pb-4">
             <div className="items-center gap-4">
               <h4 className="text-2xl flex">৳ {product.salePrice}</h4>
@@ -62,10 +69,14 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 ৳ {product.productPrice}
               </del>
             </div>
-            <p className="flex items-center bg-lime-200 py-2 px-4 rounded-full text-slate-900 ">
+            <div className="flex items-center bg-lime-200 py-2 px-4 rounded-full text-slate-900 ">
               <Tag className="w-5 h-5 text-slate-400 me-2" />
-              <h4>Save <b>50%</b></h4>
-            </p>
+              <h4>Save <b>
+                {calculateDiscountPercentage(
+                  product?.productPrice,
+                  product?.salePrice
+                )}%</b></h4>
+            </div>
           </div>
           <div className="flex justify-between items-center py-6">
             <AddToCartButton product={product} />

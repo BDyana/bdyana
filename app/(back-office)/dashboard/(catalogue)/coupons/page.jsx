@@ -24,7 +24,7 @@ export default async function Coupons() {
         href="/dashboard/coupons/new"
         linkTitle="Add Coupon"
       />
-      <div className="py-8">
+      <div className="">
         {role === "ADMIN" ? (
           <DataTable data={allCoupons} columns={columns} />
         ) : (

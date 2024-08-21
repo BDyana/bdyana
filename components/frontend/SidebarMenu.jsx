@@ -89,13 +89,19 @@ export default async function SidebarCategories() {
             <span className="text-sm">Women's & Girls' Fashion</span>
           </Link>
         </li>
-        <li className="">
-          <Link href=""
+        <li className="group">
+          <Link href="https://www.bdyana.com/category/beauty-bodycare"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
            <PawPrint className="text-slate-500" size={16} />
             <span className="text-sm">Beauty & Bodycare</span>
+            <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
           </Link>
+          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
+            </li>
+          </ul>
         </li>
         <li className="">
           <Link href=""

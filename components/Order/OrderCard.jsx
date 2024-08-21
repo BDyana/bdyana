@@ -14,7 +14,7 @@ export default function OrderCard({ order }) {
   }
 
   return (
-    <li className="overflow-hidden bg-white border border-gray-200 rounded-md">
+    <li className="overflow-hidden bg-white border border-gray-400 rounded-md">
       <div className="">
         <div className="border-b border-gray-200 lg:border-b-0 lg:border-r bg-gray-50">
           <div className="px-4 py-6 sm:p-6 lg:p-2">
