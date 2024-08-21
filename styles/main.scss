@@ -24,6 +24,7 @@ h5 {
 }
 .react-multiple-carousel__arrow {
   background: rgba(0, 0, 0, .4) !important;
+  z-index: 0 !important;
 }
 .react-multiple-carousel__arrow--left {
   left: calc(0% + 5px) !important;
