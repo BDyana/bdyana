@@ -65,7 +65,6 @@ export default function Product({ product }) {
             <ShoppingCart size={17} />
           </button>
         </div>
-
         <ProgressBar
           completed={`${progress}`}
           isLabelVisible={false}
