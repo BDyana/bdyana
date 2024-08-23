@@ -12,7 +12,7 @@ import CategoryGrid from "@/components/frontend/CategoryGrid";
 export default async function Home() {
   const categoriesData = await getData("categories");
   const categories = categoriesData.filter((category) => {
-    return category.title === "Beauty & Bodycare" || category.title === "Gadget & Accessories" || category.title === "Grocery" });
+    return category.title === "Beauty & Bodycare" || category.title === "Gadget & Accessories" || category.title === "Grocery" || category.title === "Jersey" });
 
   const trainings = await getData("trainings");
   const session = await getServerSession(authOptions);
@@ -29,12 +29,12 @@ export default async function Home() {
           </div>
         );
       })}
-
-      <MarketList />
+ 
+      {/*<MarketList />
       <CommunityTrainings
         title="Featured Trainings"
         trainings={trainings.slice(0, 3)}
-      />
+      /> */}
     </div>
   );
 }

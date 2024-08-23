@@ -272,7 +272,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               href={item.href}
               className={
                 item.href == pathname
-                  ? "flex items-center space-x-3 px-6 py-2 border-l-8 border-lime-500 text-lime-500"
+                  ? "flex items-center space-x-3 p-2 border-l-8 border-lime-500 text-lime-500"
                   : "flex items-center space-x-3 px-6 py-2 "
               }
             >

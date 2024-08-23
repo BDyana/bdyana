@@ -91,6 +91,7 @@ model Product {
   wholesaleQty   Int?
   productStock   Int?
   qty            Int?
+  productLeft    Int?
   tags           String[]
   categoryId     String   @db.ObjectId
   category       Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
