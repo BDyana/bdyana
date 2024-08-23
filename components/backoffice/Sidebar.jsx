@@ -218,11 +218,11 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
           href="/dashboard"
           className={
             pathname === "/dashboard"
-              ? "flex items-center space-x-3 px-6 py-2 border-l-8 border-lime-500 text-lime-500"
-              : "flex items-center space-x-3 px-6 py-2 "
+              ? "flex items-center space-x-2 px-2 py-1 text-lime-500"
+              : "flex items-center space-x-2 py-1 "
           }
         >
-          <LayoutGrid />
+          <LayoutGrid className="w-4 h-4" />
           <span>Dashboard</span>
         </Link>
         {catalogueLinks.length > 0 && (
@@ -231,16 +231,16 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className=""
               onClick={() => setOpenMenu(!openMenu)}
             >
-              <button className="flex items-center space-x-6  py-2 ">
+              <button className="flex items-center space-x-6 py-2 ">
                 <div className="flex items-center space-x-3">
-                  <Slack />
+                  <Slack className="w-4 h-4" />
                   <span>Catalogue</span>
                 </div>
                 {openMenu ? <ChevronDown /> : <ChevronRight />}
               </button>
             </CollapsibleTrigger>
 
-            <CollapsibleContent className="rounded-lg py-3 px-3 pl-6 dark:bg-slate-800 dark:text-slate-300">
+            <CollapsibleContent className="rrounded-lg px-3 dark:bg-slate-800 dark:text-slate-300">
               {catalogueLinks.map((item, i) => {
                 const Icon = item.icon;
                 return (
@@ -250,8 +250,8 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
                     href={item.href}
                     className={
                       pathname === item.href
-                        ? "flex items-center space-x-3 py-1 text-lime-500"
-                        : "flex items-center space-x-3  py-1 "
+                        ? "flex items-center space-x-2 py-1 text-lime-500"
+                        : "flex items-center space-x-2 py-1 "
                     }
                   >
                     <Icon className="w-4 h-4" />
@@ -272,11 +272,11 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               href={item.href}
               className={
                 item.href == pathname
-                  ? "flex items-center space-x-3 p-2 border-l-8 border-lime-500 text-lime-500"
-                  : "flex items-center space-x-3 px-6 py-2 "
+                  ? "flex items-center space-x-2 p-2 border-l-8 border-lime-500 text-lime-500"
+                  : "text-md flex items-center space-x-2 px-2 py-1"
               }
             >
-              <Icon />
+              <Icon className="w-4 h-4" />
               <span>{item.title}</span>
             </Link>
           );
