@@ -6,7 +6,7 @@ export default function Loading() {
   return (
     <div className="w-screen h-screen flex items-center">
       <div className="text-center m-auto">
-        <Image src={logo} alt="BDyana logo" className="w-100"/>
+        <Image src={logo} alt="BDyana logo" className="w-80"/>
       </div>
     </div>
   );

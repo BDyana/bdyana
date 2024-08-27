@@ -36,9 +36,10 @@ export default function Product({ product }) {
             {product.title}
           </h4>
         </Link>
-        <div className="flex items-center justify-between gap-2 pb-1 dark:text-slate-200 text-slate-800">
-          <div>
-            <p className="leading-none font-bold">BDT {product?.salePrice}</p>
+        <div className="items-center gap-2 pb-1 dark:text-slate-200 text-slate-800">
+          <div className="justify-between flex">
+            <div>
+            <p className="leading-none font-medium">BDT {product?.salePrice}</p>
             {product?.productPrice > product?.salePrice && (
               <del className="text-slate-500 text-sm mr-1 lg:mr-2">
                 BDT {product?.productPrice}
@@ -54,17 +55,18 @@ export default function Product({ product }) {
                 %
               </h5>
             )}
-            <p className="text-gray-500 dark:text-gray-600 text-xs mt-4">
-              {product?.productStock} items left
-            </p>
-          </div>
+            </div>
           <button
             onClick={() => handleAddToCart()}
             className="flex items-center hover:bg-gray-100 p-2 lg:p-3 rounded-full text-black"
           >
             <ShoppingCart size={17} />
           </button>
+          </div>
         </div>
+            <p className="text-gray-500 dark:text-gray-600 text-xs mt-1">
+              {product?.productStock} items left
+            </p>
         <ProgressBar
           completed={`${progress}`}
           isLabelVisible={false}

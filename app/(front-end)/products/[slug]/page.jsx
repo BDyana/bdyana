@@ -1,3 +1,4 @@
+"use client";
 import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import AddToCartButton from "@/components/frontend/AddToCartButton";
 import Breadcrumb from "@/components/frontend/Breadcrumb";
@@ -6,12 +7,10 @@ import ProductImageCarousel from "@/components/frontend/ProductImageCarousel";
 import ProductShareButton from "@/components/frontend/ProductShareButton";
 import { getData } from "@/lib/getData";
 import {PhoneCall, Truck } from "lucide-react";
-import { ShoppingCart } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import CountdownTimer from '../../../../components/frontend/CountdownTimer';
-import ToggleBar from "@/components/frontend/ToggleBar";
+import { useDispatch } from "react-redux";
+
 
 export default async function ProductDetailPage({ params: { slug } }) {
   const product = await getData(`products/product/${slug}`);
@@ -35,11 +34,10 @@ export default async function ProductDetailPage({ params: { slug } }) {
             />
           </div>
           <div className="w-7/12">
-          <div className="flex items-center justify-between">
-            <h1 className="">
+          <div className="flex items-center justify-between mt-3">
+            <h1>
               {product.title}
             </h1>
-            <ProductShareButton urlToShare={urlToShare} />
           </div>
           <div className="flex gap-3 mt-2 mb-8">
             <div>
@@ -60,12 +58,30 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </p>
             </div>
           </div>
+          <flashsale/>
           {/* <div>
             <h1>Welcome to My Store!</h1>
             <CountdownTimer targetDate={targetDate} />
           </div> */}
           <div className="flex items-center gap-3 pt-4 border-b border-gray-200 pb-4">
             <div className="gap-3 flex items-end">
+
+            {product?.productPrice > product?.salePrice && (
+              <del className="text-slate-500 text-sm mr-1 lg:mr-2">
+                BDT {product?.productPrice}
+              </del>
+            )}
+            {product?.productPrice > product?.salePrice && (
+              <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
+                -
+                {calculateDiscountPercentage(
+                  product?.productPrice,
+                  product?.salePrice
+                )}
+                %
+              </h5>
+            )}
+{/* 
               <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
               <del className="text-[#75757a] text-xl font-light">
                 BDT {product.productPrice}
@@ -77,9 +93,8 @@ export default async function ProductDetailPage({ params: { slug } }) {
                   product?.productPrice,
                   product?.salePrice
                 )}%</b></h4>
-            </div>
+            </div> */}
           </div>
-          <div>
           </div>
           <div className="flex justify-between items-center py-6">
             <AddToCartButton product={product} />
@@ -88,16 +103,18 @@ export default async function ProductDetailPage({ params: { slug } }) {
               <PhoneCall className="mt-3"/>
               </div>
               <div>
-              <h4>Call for Any Query :</h4>
-              <p><b> 01511- 309 309</b></p>
+                <h4>Call for Any Query :</h4>
+                <p><b> 01511- 309 309</b></p>
               </div>
             </div>
-        </div>
-        <ToggleBar />
+          </div>
+          <div className="float-right">
+            <ProductShareButton urlToShare={urlToShare} />
+          </div>
         </div>
         </div>
         <div className="col-span-12 md:col-span-5 lg:col-span-3 sm:block bg-white border border-gray-100 rounded-sm  dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden">
-          <h4 className="dark:bg-gray-800 p-2 border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
+          <h4 className="dark:bg-gray-800 p-2 font-medium border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
             DELIVERY & RETURNS
           </h4>
 
@@ -110,7 +127,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
               Eligible for Free Delivery.
               <Link href="#">View Details</Link>
             </div> */}
-            <div className="flex border-b border-gray-300 gap-2">
+            <div className="flex border-b border-gray-200 gap-2 pb-4">
               <div>
                 <Truck className="mt-3"/>
               </div>
@@ -120,7 +137,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 Estimated delivery on 27 August When you order within the next 7hrs 9mins Our delivery agent will contact you on the day of delivery</h5>
               </div>
             </div>
-            <div className="flex border-b border-gray-300 gap-2">
+            <div className="flex border-b border-gray-200 gap-2 pb-4">
               <div>
                 <Truck className="mt-3"/>
               </div>
@@ -129,7 +146,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <h5>Delivery Fees BDT 100</h5>
               </div>
             </div>
-            <div className="flex border-b border-gray-200 gap-2">
+            <div className="flex border-b border-gray-200 gap-2 pb-4">
               <div>
                 <Truck className="mt-3"/>
               </div>
