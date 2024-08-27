@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CategoriesPage = () => {
+export default function Category() {
     return (
         <div>
             <h1>All Categories</h1>
