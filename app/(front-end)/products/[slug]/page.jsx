@@ -101,7 +101,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
             DELIVERY & RETURNS
           </h4>
 
-          <div className="p-2 gap-y-4">
+          <div className="p-2 space-y-2">
             {/* <div className="flex rounded-lg py-2 px-4 bg-orange-400 text-slate-50 items-center gap-3">
               <span>BDyana Express </span>
               <Send />
@@ -110,7 +110,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
               Eligible for Free Delivery.
               <Link href="#">View Details</Link>
             </div> */}
-            <div className="flex border-b border-gray-300">
+            <div className="flex border-b border-gray-300 gap-2">
               <div>
                 <Truck className="mt-3"/>
               </div>
