@@ -140,16 +140,16 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
         icon: CircleDollarSign,
         href: "/dashboard/wallet",
       },
-      {
-        title: "Farmer Support",
-        icon: HeartHandshake,
-        href: "/dashboard/farmer-support",
-      },
-      {
-        title: "Settings",
-        icon: LayoutGrid,
-        href: "/dashboard/settings",
-      },
+      // {
+      //   title: "Farmer Support",
+      //   icon: HeartHandshake,
+      //   href: "/dashboard/farmer-support",
+      // },
+      // {
+      //   title: "Settings",
+      //   icon: LayoutGrid,
+      //   href: "/dashboard/settings",
+      // },
       {
         title: "Online Store",
         icon: ExternalLink,
@@ -251,7 +251,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
                     className={
                       pathname === item.href
                         ? "flex items-center space-x-2 py-1 text-lime-500"
-                        : "flex items-center space-x-2 py-1 "
+                        : "flex items-center space-x-2 py-1 text-sm"
                     }
                   >
                     <Icon className="w-4 h-4" />
@@ -273,7 +273,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className={
                 item.href == pathname
                   ? "flex items-center space-x-2 p-2 border-l-8 border-lime-500 text-lime-500"
-                  : "text-md flex items-center space-x-2 px-2 py-1"
+                  : "text-md flex items-center space-x-2 px-2 py-1 text-sm"
               }
             >
               <Icon className="w-4 h-4" />

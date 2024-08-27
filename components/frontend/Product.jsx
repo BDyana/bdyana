@@ -20,7 +20,7 @@ export default function Product({ product }) {
   console.log(progress);
 
   return (
-    <div className="mb-2 mx-1 bg-white dark:bg-slate-900 overflow-hidden border hover:shadow  ">
+    <div className="mb-2 mx-1 bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 hover:shadow  ">
       <Link href={`/products/${product.slug}`}>
         <Image
           src={product.imageUrl}
@@ -38,10 +38,10 @@ export default function Product({ product }) {
         </Link>
         <div className="flex items-center justify-between gap-2 pb-1 dark:text-slate-200 text-slate-800">
           <div>
-            <p className="leading-none font-medium">৳ {product?.salePrice}</p>
+            <p className="leading-none font-bold">BDT {product?.salePrice}</p>
             {product?.productPrice > product?.salePrice && (
               <del className="text-slate-500 text-sm mr-1 lg:mr-2">
-                ৳ {product?.productPrice}
+                BDT {product?.productPrice}
               </del>
             )}
             {product?.productPrice > product?.salePrice && (

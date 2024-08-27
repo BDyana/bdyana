@@ -11,7 +11,7 @@ export default function FilterComponent({ category, products }) {
   const productCount = category.products.length;
   return (
     <div>
-      <div className="bg-white space-y-2 text-slate-900 py-6">
+      <div className="bg-white space-y-2 text-slate-900 py-6 px-2">
         <Breadcrumb title={title} resultCount={productCount} />
         <Sorting isSearch={category?.isSearch} title={title} slug={slug} />
       </div>

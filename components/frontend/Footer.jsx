@@ -1,7 +1,7 @@
 import HelpModal from "./HelpModal";
 const Footer = () => {
   return (
-    <section className="pt-8 lg:pt-18 pb-4 lg:pb-6 bg-gray-50">
+    <section className="pt-8 lg:pt-18 pb-4 lg:pb-5 bg-gray-50">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-8 lg:gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
@@ -215,7 +215,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="mt-6 mb-4 lg:mt-12 lg:mb-6 border-gray-200" />
+        <hr className="mt-6 mb-4 lg:mt-12 lg:mb-5 border-gray-200" />
 
         <p className="text-sm text-center text-gray-600">
           © Copyright 2024, All Rights Reserved by <b>BDyana</b>

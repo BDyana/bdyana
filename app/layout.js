@@ -2,9 +2,11 @@
 import "../styles/main.scss";
 import Providers from "@/context/Providers";
 
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
+// import { Roboto } from "next/font/google";
+// import { Segoe } from "https://fonts.cdnfonts.com/css/segoe-ui-4";
+// @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+// const segoe = Segoe({ subsets: ["segoe"] });
+// const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <body className={roboto.className}>
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
