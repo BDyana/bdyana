@@ -11,6 +11,7 @@ const Footer = () => {
               Best Online E-Commerce Website in Bangladesh. You can Buy
               your Essential Products with Best Price. Happy Shopping...
             </p>
+            <p><b>Helpline: 01511- 309 309</b></p>
 
             <ul className="flex items-center space-x-3 mt-5 lg:mt-9">
               <li>

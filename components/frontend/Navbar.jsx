@@ -50,10 +50,10 @@ export default function Navbar() {
               <CartCount />
               <ThemeSwitcherBtn />
             </div>
-              <div className="flex sm:hidden gap-2">
+              {/* <div className="flex sm:hidden gap-2">
                 <PhoneCall size={14} className="mt-1"/>
                 <h4><b>01511- 309 309</b></h4>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="container mx-auto mt-1 pb-2 px-2">
