@@ -65,35 +65,35 @@ export default async function ProductDetailPage({ params: { slug } }) {
           </div> */}
           <div className="flex items-center gap-3 pt-4 border-b border-gray-200 pb-4">
             <div className="gap-3 flex items-end">
-
-            {product?.productPrice > product?.salePrice && (
-              <del className="text-slate-500 text-sm mr-1 lg:mr-2">
-                BDT {product?.productPrice}
-              </del>
-            )}
-            {product?.productPrice > product?.salePrice && (
-              <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
-                -
-                {calculateDiscountPercentage(
-                  product?.productPrice,
-                  product?.salePrice
-                )}
-                %
-              </h5>
-            )}
-{/* 
               <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
-              <del className="text-[#75757a] text-xl font-light">
-                BDT {product.productPrice}
-              </del>
-            </div>
-            <div className="flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900 ">
-              <h4>- <b>
-                {calculateDiscountPercentage(
-                  product?.productPrice,
-                  product?.salePrice
-                )}%</b></h4>
-            </div> */}
+              {product?.productPrice > product?.salePrice && (
+                <del className="text-[#75757a] text-xl font-light">
+                  BDT {product?.productPrice}
+                </del>
+              )}
+              {product?.productPrice > product?.salePrice && (
+                <h5 className="bg-[#fef3e9] text-[#f68b1e] flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900"><b>
+                  -
+                  {calculateDiscountPercentage(
+                    product?.productPrice,
+                    product?.salePrice
+                  )}
+                  %</b>
+                </h5>
+              )}
+                  {/* 
+                  <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
+                  <del className="text-[#75757a] text-xl font-light">
+                    BDT {product.productPrice}
+                  </del>
+                </div>
+                <div className="flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900 ">
+                  <h4>- <b>
+                    {calculateDiscountPercentage(
+                      product?.productPrice,
+                      product?.salePrice
+                    )}%</b></h4>
+                </div> */}
           </div>
           </div>
           <div className="flex justify-between items-center py-6">
