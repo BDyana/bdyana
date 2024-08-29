@@ -20,7 +20,7 @@ export default function Product({ product }) {
   console.log(progress);
 
   return (
-    <div className="mb-2 mx-1 bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 hover:shadow  ">
+    <div className="mb-2 mx-1 lg:mx-0.5 bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 hover:shadow  ">
       <Link href={`/products/${product.slug}`}>
         <Image
           src={product.imageUrl}

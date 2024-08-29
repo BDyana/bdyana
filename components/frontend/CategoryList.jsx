@@ -9,7 +9,7 @@ export default function CategoryList({ category, isMarketPage }) {
       <div className="dark:bg-gray-800 py-1 pl-4 pr-0 dark:border-gray-600 text-slate-800 dark:text-slate-100 flex justify-between items-center">
         <h2>{category.title}</h2>
         <Link
-          className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 py-2"
+          className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 pt-2"
           href={`/category/${category.slug}`}
         >
           <MoveRight />
