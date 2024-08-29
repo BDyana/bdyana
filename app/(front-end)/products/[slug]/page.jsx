@@ -33,7 +33,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
               thumbnail={product.imageUrl}
             />
           </div>
-          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3">
+          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3 pb-5">
             <div className="flex items-center justify-between mt-3">
               <h1>
                 {product.title}
