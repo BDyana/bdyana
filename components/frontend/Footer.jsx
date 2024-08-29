@@ -7,13 +7,13 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <img className="w-auto h-9" src="/Logo.png" alt="" />
 
-            <p className="text-base leading-relaxed text-gray-600 mt-5 lg:mt-7">
+            <p className="text-base leading-relaxed text-gray-600 my-3 lg:mt-7">
               Best Online E-Commerce Website in Bangladesh. You can Buy
               your Essential Products with Best Price. Happy Shopping...
             </p>
-            <p><b>Helpline: 01511- 309 309</b></p>
+            <h3><b>Helpline:</b> 01511- 309 309</h3>
 
-            <ul className="flex items-center space-x-3 mt-5 lg:mt-9">
+            <ul className="flex items-center space-x-3 mt-5">
               <li>
                 <a
                   href="#"

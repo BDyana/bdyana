@@ -32,7 +32,7 @@ export default function Product({ product }) {
       </Link>
       <div className="px-1 lg:px-2 pb-2">
         <Link href={`/products/${product.slug}`}>
-          <h4 className="text-sm text-center dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
+          <h4 className="text-sm dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
             {product.title}
           </h4>
         </Link>
@@ -64,17 +64,19 @@ export default function Product({ product }) {
           </button>
           </div>
         </div>
+        <div>
             <p className="text-gray-500 dark:text-gray-600 text-xs mt-1">
               {product?.productStock} items left
             </p>
-        <ProgressBar
-          completed={`${progress}`}
-          isLabelVisible={false}
-          bgColor={
-            progress >= 70 ? "#00b289" : progress >= 50 ? "#d4851e" : "#f56565"
-          }
-          height={10}
-        />
+            <ProgressBar
+              completed={`${progress}`}
+              isLabelVisible={false}
+              bgColor={
+                progress >= 70 ? "#00b289" : progress >= 50 ? "#d4851e" : "#f56565"
+              }
+              height={10}
+            />
+          </div>
       </div>
     </div>
   );

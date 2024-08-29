@@ -26,7 +26,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
     <div>
       <Breadcrumb />
       <div className="grid grid-cols-12 gap-4">
-        <div className="bg-white col-span-12 md:col-span-9 flex border border-gray-100 pr-3">
+        <div className="bg-white col-span-12 md:col-span-9 flex border border-gray-100 pr-3 rounded-sm">
           <div className="w-5/12 mr-5">
             <ProductImageCarousel
               productImages={product.productImages}
@@ -72,7 +72,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 </del>
               )}
               {product?.productPrice > product?.salePrice && (
-                <h5 className="bg-[#fef3e9] text-[#f68b1e] flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900"><b>
+                <h5 className="bg-[#fef3e9] text-[#f68b1e] flex items-center py-1 px-2 rounded-sm"><b>
                   -
                   {calculateDiscountPercentage(
                     product?.productPrice,
@@ -113,7 +113,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
           </div>
         </div>
         </div>
-        <div className="col-span-12 md:col-span-5 lg:col-span-3 sm:block bg-white border border-gray-100 rounded-sm  dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden">
+        <div className="col-span-12 md:col-span-5 lg:col-span-3 sm:block bg-white border border-gray-100 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden">
           <h4 className="dark:bg-gray-800 p-2 font-medium border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
             DELIVERY & RETURNS
           </h4>
@@ -133,8 +133,8 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </div>
               <div>
                 <h3>Cash on Delivery Available.</h3>
-                <h5>Delivery Fees BDT 100 <br/>
-                Estimated delivery on 27 August When you order within the next 7hrs 9mins Our delivery agent will contact you on the day of delivery</h5>
+                <h5>Delivery Fees<br/>
+                Inside Dhaka  BDT 60, Outside Dhaka  BDT 100. Estimated delivery on next day When you order Our delivery agent will contact you on the day of delivery</h5>
               </div>
             </div>
             <div className="flex border-b border-gray-200 gap-2 pb-4">
@@ -142,8 +142,8 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <Truck className="mt-3"/>
               </div>
               <div>
-                <h3>14 days easy return.</h3>
-                <h5>Delivery Fees BDT 100</h5>
+                <h3>Standard Delivery.</h3>
+                <h5>Guaranteed by 1-3 Days</h5>
               </div>
             </div>
             <div className="flex border-b border-gray-200 gap-2 pb-4">
@@ -152,7 +152,6 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </div>
               <div>
                 <h3>Warranty not available.</h3>
-                <h5>Delivery Fees BDT 100</h5>
               </div>
             </div>
             <div className="flex gap-2">
@@ -160,8 +159,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <Truck className="mt-3"/>
               </div>
               <div>
-                <h3>Standard Delivery.</h3>
-                <h5>Delivery Fees BDT 100</h5>
+                <h3>This item is non-returnable.</h3>
               </div>
              </div>
            {/* <h2 className="text-slate-200 py-2">Choose your Location</h2>
@@ -201,7 +199,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
           </div>
         </div>
       </div>
-      <div className="bg-white dark:bg-slate-700 my-8 rounded-xl p-4">
+      <div className="bg-white dark:bg-slate-700 my-8 rounded-sm p-4">
         <h2 className="mb-4 text-xl font-semibold dark:text-slate-200 ml-3">
           Similar Products
         </h2>
