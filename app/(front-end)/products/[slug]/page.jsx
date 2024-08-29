@@ -26,19 +26,19 @@ export default async function ProductDetailPage({ params: { slug } }) {
     <div>
       <Breadcrumb />
       <div className="grid grid-cols-12 gap-4">
-        <div className="bg-white col-span-12 md:col-span-9 flex border border-gray-100 pr-3 rounded-sm">
-          <div className="w-5/12 mr-5">
+        <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 pr-3 rounded-sm">
+          <div className="w-full md:w-5/12 mr-5">
             <ProductImageCarousel
               productImages={product.productImages}
               thumbnail={product.imageUrl}
             />
           </div>
-          <div className="w-7/12">
-          <div className="flex items-center justify-between mt-3">
-            <h1>
-              {product.title}
-            </h1>
-          </div>
+          <div className="w-full md:w-7/12">
+            <div className="flex items-center justify-between mt-3">
+              <h1>
+                {product.title}
+              </h1>
+            </div>
           <div className="flex gap-3 mt-2 mb-8">
             <div>
               <h4>Cateogory : <Link className="text-blue-600" href={`/category/${category.slug}`}>{category.title}</Link></h4>
