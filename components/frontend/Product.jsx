@@ -20,7 +20,7 @@ export default function Product({ product }) {
   console.log(progress);
 
   return (
-    <div className="mb-2 mx-1 lg:mx-0.5 bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 hover:shadow  ">
+    <div className="mb-1 lg:mb-2 lg:mx-1 mx-0.5 bg-white dark:bg-slate-900 overflow-hidden border border-gray-100 hover:shadow">
       <Link href={`/products/${product.slug}`}>
         <Image
           src={product.imageUrl}
@@ -32,29 +32,29 @@ export default function Product({ product }) {
       </Link>
       <div className="px-1 lg:px-2 pb-2">
         <Link href={`/products/${product.slug}`}>
-          <h4 className="text-sm dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
+          <h4 className="lg:text-sm text-xs dark:text-slate-200 text-slate-900 my-2 line-clamp-2">
             {product.title}
           </h4>
         </Link>
         <div className="items-center gap-2 pb-1 dark:text-slate-200 text-slate-800">
           <div className="justify-between flex">
             <div>
-            <p className="leading-none font-medium">BDT {product?.salePrice}</p>
-            {product?.productPrice > product?.salePrice && (
-              <del className="text-slate-500 text-sm mr-1 lg:mr-2">
-                BDT {product?.productPrice}
-              </del>
-            )}
-            {product?.productPrice > product?.salePrice && (
-              <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
-                -
-                {calculateDiscountPercentage(
-                  product?.productPrice,
-                  product?.salePrice
-                )}
-                %
-              </h5>
-            )}
+              <p className="leading-none font-medium">BDT {product?.salePrice}</p>
+              {product?.productPrice > product?.salePrice && (
+                <del className="text-slate-500 lg:text-sm text-xs mr-1 lg:mr-2">
+                  BDT {product?.productPrice}
+                </del>
+              )}
+              {product?.productPrice > product?.salePrice && (
+                <h5 className="bg-[#fef3e9] text-[#f68b1e] p-1 inline ">
+                  -
+                  {calculateDiscountPercentage(
+                    product?.productPrice,
+                    product?.salePrice
+                  )}
+                  %
+                </h5>
+              )}
             </div>
           <button
             onClick={() => handleAddToCart()}
