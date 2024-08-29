@@ -18,11 +18,11 @@ export default async function CategoryGrid() {
   const newCategories = selectRandomCategories(categories, 16);
   // console.log(categories);
   return (
-    <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden">
+    <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
       <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
         Shop By Category
       </h2>
-      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1">
+      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {
             return (
