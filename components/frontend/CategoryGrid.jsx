@@ -22,7 +22,7 @@ export default async function CategoryGrid() {
       <h2 className="bg-slate-100 dark:bg-gray-800 py-3 px-4 font-semibold border-b border-gray-300 dark:border-gray-600 text-slate-800 dark:text-slate-100">
         Shop By Category
       </h2>
-      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-x-1 gap-y-8">
+      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {
             return (
