@@ -26,14 +26,14 @@ export default async function ProductDetailPage({ params: { slug } }) {
     <div>
       <Breadcrumb />
       <div className="grid grid-cols-12 gap-4">
-        <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 pr-3 rounded-sm">
-          <div className="w-full md:w-5/12 mr-5">
+        <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm">
+          <div className="w-full md:w-5/12">
             <ProductImageCarousel
               productImages={product.productImages}
               thumbnail={product.imageUrl}
             />
           </div>
-          <div className="w-full md:w-7/12">
+          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3">
             <div className="flex items-center justify-between mt-3">
               <h1>
                 {product.title}
@@ -49,7 +49,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
             </div> */}
           </div>
           <div className="border-b border-gray-300">
-            <h4><b>Specification : </b></h4>
+            <h4><b>SPECIFICATION : </b></h4>
             <p className="py-2 ">{product.description}</p>
             <div className="flex items-center gap-8 mb-4 justify-between">
               <h4>SKU: {product.sku}</h4>
