@@ -12,7 +12,7 @@ export default function CategoryList({ category, isMarketPage }) {
           className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4"
           href={`/category/${category.slug}`}
         >
-          <MoveRight />
+          <MoveRight size={32} strokeWidth={1.5} />
         </Link>
       </div>
       <div className="bg-white dark:bg-slate-700 pt-2 px-1 pb-0">
