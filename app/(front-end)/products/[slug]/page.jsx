@@ -103,8 +103,8 @@ export default async function ProductDetailPage({ params: { slug } }) {
               <PhoneCall className="mt-3"/>
               </div>
               <div>
-                <h4>Call for Any Query :</h4>
-                <p><b> 01511- 309 309</b></p>
+                <h4>Call for Any Query :<br/>
+                01511- 309 309</h4>
               </div>
             </div>
           </div>

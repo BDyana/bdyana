@@ -23,7 +23,7 @@ export default async function AllProducts({
     <div className="pt-8 pb-4">
         <h2 className="text-xl">All Products</h2>
         <div>
-            <div className="flex grid grid-cols-3 lg:grid-cols-6 md:grid-cols-4 mt-4">
+            <div className="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-4 mt-4">
                 {productsList.map((product) => (
                     <div key={product.id}>
                     <Product product={product}/>

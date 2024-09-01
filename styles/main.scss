@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url('/public/fonts/Segoe UI.woff') format('truetype'); /* Adjust the format as per the font file type */
+  src: url('/public/fonts/Segoe UI.woff') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -119,9 +119,6 @@ p {
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    // background: #f3f7ff;
   }
 }
 /* width */
