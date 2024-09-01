@@ -6,7 +6,7 @@ import CategoryCarousel from "@/components/frontend/CategoryCarousel";
 import ProductImageCarousel from "@/components/frontend/ProductImageCarousel";
 import ProductShareButton from "@/components/frontend/ProductShareButton";
 import { getData } from "@/lib/getData";
-import {PhoneCall, Truck } from "lucide-react";
+import {Banknote, PhoneCall, ShieldBan, ShieldOff, Truck } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
@@ -103,8 +103,8 @@ export default async function ProductDetailPage({ params: { slug } }) {
               <PhoneCall className="mt-3"/>
               </div>
               <div>
-                <h4>Call for Any Query :<br/>
-                01511- 309 309</h4>
+                <h4>Call for Any Query :</h4>
+                <h3 className="font-bold">01511- 309 309</h3>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
             </div> */}
             <div className="flex border-b border-gray-200 gap-2 pb-4">
               <div>
-                <Truck className="mt-3"/>
+                <Banknote className="mt-3"/>
               </div>
               <div>
                 <h3>Cash on Delivery Available.</h3>
@@ -143,23 +143,25 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </div>
               <div>
                 <h3>Standard Delivery.</h3>
-                <h5>Guaranteed by 1-3 Days</h5>
+                <h5>Standard Time : 1-3 Days</h5>
               </div>
             </div>
             <div className="flex border-b border-gray-200 gap-2 pb-4">
               <div>
-                <Truck className="mt-3"/>
+                <ShieldBan className="mt-3"/>
               </div>
               <div>
-                <h3>Warranty not available.</h3>
+                <h3>Warranty Not Available.</h3>
+                <h5>Warranty for Some Specific Product.</h5>
               </div>
             </div>
             <div className="flex gap-2">
               <div>
-                <Truck className="mt-3"/>
+                <ShieldOff className="mt-3"/>
               </div>
               <div>
                 <h3>This item is non-returnable.</h3>
+                <h5>Some are Returnable. Check your product in-front-of Delivery man. If get any problem please inform to Helpline Number</h5>
               </div>
              </div>
            {/* <h2 className="text-slate-200 py-2">Choose your Location</h2>
