@@ -76,7 +76,7 @@ export default function Product({ product }) {
               }
               height={10}
             />
-          </div>
+        </div>
       </div>
     </div>
   );
