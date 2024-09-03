@@ -64,7 +64,7 @@ export default function Product({ product }) {
           </button>
           </div>
         </div>
-        <div>
+        {/* <div>
             <p className="text-gray-500 dark:text-gray-600 text-xs mt-1">
               {product?.productStock} items left
             </p>
@@ -76,7 +76,7 @@ export default function Product({ product }) {
               }
               height={10}
             />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -24,7 +24,9 @@ export default async function ProductDetailPage({ params: { slug } }) {
   const targetDate = '2024-09-01T00:00:00Z';
   return (
     <div>
-      <Breadcrumb />
+      <div className="hidden lg:flex">
+        <Breadcrumb />
+      </div>
       <div className="grid grid-cols-12 gap-4">
         <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm">
           <div className="w-full md:w-5/12">
@@ -39,62 +41,58 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 {product.title}
               </h1>
             </div>
-          <div className="flex gap-3 mt-2 mb-8">
-            <div>
-              <h4>Cateogory : <Link className="text-blue-600" href={`/category/${category.slug}`}>{category.title}</Link></h4>
+            <div className="flex gap-3 mt-2 mb-8">
+              <div>
+                <h4>Cateogory : <Link className="text-blue-600" href={`/category/${category.slug}`}>{category.title}</Link></h4>
+              </div>
+             {/*<span>|</span>
+              <div>
+                <p><b>Brand :</b> Brand Name</p>
+              </div> */}
             </div>
-{/*             <span>|</span>
-            <div>
-              <p><b>Brand :</b> Brand Name</p>
-            </div> */}
-          </div>
-          <div className="border-b border-gray-300">
-            <h4><b>SPECIFICATION : </b></h4>
-            <p className="py-2 ">{product.description}</p>
-            <div className="flex items-center gap-8 mb-4 justify-between">
-              <h4>SKU: {product.sku}</h4>
-              <p className="py-1.5 px-4 border rounded-full text-slate-900 ">
-                <b>Stock</b>: {product.productStock}
-              </p>
+            <div className="border-b border-gray-300">
+              <h4><b>SPECIFICATION : </b></h4>
+              <p className="py-2 ">{product.description}</p>
+              <div className="flex items-center gap-8 mb-4 justify-between">
+                <h4>SKU: {product.sku}</h4>
+                <p className="py-1.5 px-4 border rounded-full text-slate-900 ">
+                  <b>Stock</b>: {product.productStock}
+                </p>
+              </div>
             </div>
-          </div>
-          <flashsale/>
-          {/* <div>
-            <h1>Welcome to My Store!</h1>
-            <CountdownTimer targetDate={targetDate} />
-          </div> */}
-          <div className="flex items-center gap-3 pt-4 border-b border-gray-200 pb-4">
-            <div className="gap-3 flex items-end">
-              <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
-              {product?.productPrice > product?.salePrice && (
-                <del className="text-[#75757a] text-xl font-light">
-                  BDT {product?.productPrice}
-                </del>
-              )}
-              {product?.productPrice > product?.salePrice && (
-                <h5 className="bg-[#fef3e9] text-[#f68b1e] flex items-center py-1 px-2 rounded-sm"><b>
-                  -
-                  {calculateDiscountPercentage(
-                    product?.productPrice,
-                    product?.salePrice
-                  )}
-                  %</b>
-                </h5>
-              )}
-                  {/* 
-                  <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
+            <flashsale/>
+            <div className="flex items-center gap-3 pt-4 border-b border-gray-200 pb-4">
+              <div className="gap-3 flex items-end">
+                <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
+                {product?.productPrice > product?.salePrice && (
                   <del className="text-[#75757a] text-xl font-light">
-                    BDT {product.productPrice}
+                    BDT {product?.productPrice}
                   </del>
-                </div>
-                <div className="flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900 ">
-                  <h4>- <b>
+                )}
+                {product?.productPrice > product?.salePrice && (
+                  <h5 className="bg-[#fef3e9] text-[#f68b1e] flex items-center py-1 px-2 rounded-sm"><b>
+                    -
                     {calculateDiscountPercentage(
                       product?.productPrice,
                       product?.salePrice
-                    )}%</b></h4>
-                </div> */}
-          </div>
+                    )}
+                    %</b>
+                  </h5>
+                )}
+                    {/* 
+                    <h4 className="text-2xl font-bold">BDT {product.salePrice}</h4>
+                    <del className="text-[#75757a] text-xl font-light">
+                      BDT {product.productPrice}
+                    </del>
+                  </div>
+                  <div className="flex items-center bg-lime-200 py-1 px-2 rounded-sm text-slate-900 ">
+                    <h4>- <b>
+                      {calculateDiscountPercentage(
+                        product?.productPrice,
+                        product?.salePrice
+                      )}%</b></h4>
+                  </div> */}
+            </div>
           </div>
           <div className="flex justify-between items-center py-6">
             <AddToCartButton product={product} />
@@ -112,12 +110,11 @@ export default async function ProductDetailPage({ params: { slug } }) {
             <ProductShareButton urlToShare={urlToShare} />
           </div>
         </div>
-        </div>
+      </div>
         <div className="col-span-12 md:col-span-5 lg:col-span-3 sm:block bg-white border border-gray-100 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden">
           <h4 className="dark:bg-gray-800 p-2 font-medium border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
             DELIVERY & RETURNS
           </h4>
-
           <div className="p-2 space-y-2">
             {/* <div className="flex rounded-lg py-2 px-4 bg-orange-400 text-slate-50 items-center gap-3">
               <span>BDyana Express </span>
