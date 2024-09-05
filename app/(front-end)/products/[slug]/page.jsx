@@ -129,11 +129,18 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <Banknote className="mt-3"/>
               </div>
               <div>
-                <h3>Cash on Delivery Available.</h3>
-                <h4>Delivery Fees</h4>
+                <h3>Delivery Fees</h3>
                 <h5>Inside Dhaka  BDT 60,<br/>
-                Outside Dhaka  BDT 100.<br/>
-                Estimated delivery on next day When you order Our delivery agent will contact you on the day of delivery</h5>
+                Outside Dhaka  BDT 100.</h5>
+              </div>
+            </div>
+            <div className="flex border-b border-gray-200 gap-2 pb-4">
+              <div>
+                <Banknote className="mt-3"/>
+              </div>
+              <div>
+                <h3>Cash on Delivery Available.</h3>
+                <h5>You can pay to Delivery man after your product ckecking.</h5>
               </div>
             </div>
             <div className="flex border-b border-gray-200 gap-2 pb-4">
