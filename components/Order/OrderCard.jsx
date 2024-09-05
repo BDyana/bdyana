@@ -47,7 +47,7 @@ export default function OrderCard({ order }) {
                   Total Amount
                 </p>
                 <p className="text-sm font-bold text-gray-900 mt-0.5">
-                  ${subTotal}
+                  ৳ {subTotal}
                 </p>
               </div>
               <div>

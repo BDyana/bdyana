@@ -130,8 +130,10 @@ export default async function ProductDetailPage({ params: { slug } }) {
               </div>
               <div>
                 <h3>Cash on Delivery Available.</h3>
-                <h5>Delivery Fees<br/>
-                Inside Dhaka  BDT 60, Outside Dhaka  BDT 100. Estimated delivery on next day When you order Our delivery agent will contact you on the day of delivery</h5>
+                <h4>Delivery Fees</h4>
+                <h5>Inside Dhaka  BDT 60,<br/>
+                Outside Dhaka  BDT 100.<br/>
+                Estimated delivery on next day When you order Our delivery agent will contact you on the day of delivery</h5>
               </div>
             </div>
             <div className="flex border-b border-gray-200 gap-2 pb-4">
@@ -198,7 +200,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
           </div>
         </div>
       </div>
-      <div className="bg-white dark:bg-slate-700 my-8 rounded-sm py-2">
+      <div className="bg-white dark:bg-slate-700 mt-12 rounded-sm py-2">
         <h2 className="mb-4 text-xl font-semibold dark:text-slate-200 ml-3">
           Similar Products
         </h2>

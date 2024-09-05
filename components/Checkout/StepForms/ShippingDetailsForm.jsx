@@ -100,7 +100,7 @@ export default function ShippingDetailsForm() {
                 type="radio"
                 id="hosting-small"
                 name="hosting"
-                value="50"
+                value="60"
                 className="hidden peer"
                 required
                 onChange={(e) => setShippingCost(e.target.value)}
@@ -113,7 +113,7 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0 " />
                   <div className="">
-                    <p>Delivery in 3 Days for ৳50</p>
+                    <p>Delivery inside Dhaka - ৳ 60</p>
                   </div>
                 </div>
                 <Circle className="w-5 h-5 ms-3 flex-shrink-0" />
@@ -124,7 +124,7 @@ export default function ShippingDetailsForm() {
                 type="radio"
                 id="hosting-medium"
                 name="hosting"
-                value="75"
+                value="100"
                 class="hidden peer"
                 onChange={(e) => setShippingCost(e.target.value)}
               />
@@ -135,13 +135,13 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0 " />
                   <div className="">
-                    <p>Delivery in 2 Days for ৳75 </p>
+                    <p>Delivery Outside Dhaka - ৳ 100 </p>
                   </div>
                 </div>
                 <Circle className="w-5 h-5 ms-3 flex-shrink-0" />
               </label>
             </li>
-            <li>
+            {/* <li>
               <input
                 type="radio"
                 id="hosting-big"
@@ -162,7 +162,7 @@ export default function ShippingDetailsForm() {
                 </div>
                 <Circle className="w-5 h-5 ms-3 flex-shrink-0" />
               </label>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

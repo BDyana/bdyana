@@ -55,7 +55,7 @@ export default function PriceFilter({ slug, isSearch }) {
         <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl">Filter</h2>
           <Link
-            className="text-sm font-medium bg-gray-200 hover:bg-gray-400 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 rounded px-4 py-2 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800 transition-all"
+            className="text-sm font-medium bg-gray-200 hover:bg-gray-400 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 rounded px-3 py-1 dark:bg-lime-600 dark:hover:bg-lime-700 focus:outline-none dark:focus:ring-lime-800 transition-all"
             href={isSearch ? `/search?search=${search}` : `/category/${slug}`}
           >
             Reset

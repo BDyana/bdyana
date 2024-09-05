@@ -16,10 +16,6 @@ export default function CartSubTotalCard({ subTotal }) {
         Add your Shipping address at checkout to see shipping charges
       </p>
       <div className="flex items-center justify-between py-4 font-bold">
-        <span>Delivery Charge </span>
-        <span>৳ 50</span>
-      </div>
-      <div className="flex items-center justify-between py-4 font-bold">
         <span>Total </span>
         <span>৳{totalPrice}</span>
       </div>
