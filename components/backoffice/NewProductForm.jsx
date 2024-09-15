@@ -1,6 +1,6 @@
 "use client";
+import ImageInput from "@/components/FormInputs/ImageInput";
 import ArrayItemsInput from "@/components/FormInputs/ArrayItemsInput";
-
 import SelectInput from "@/components/FormInputs/SelectInput";
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextareaInput from "@/components/FormInputs/TextAreaInput";
@@ -15,6 +15,13 @@ import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import dynamic from "next/dynamic";
+const QuillEditor = dynamic(
+  () => import("@/components/FormInputs/QuillEditor"),
+  {
+    ssr: false,
+  }
+);
 import MultipleImageInput from "../FormInputs/MultipleImageInput";
 
 export default function NewProductForm({
@@ -23,6 +30,7 @@ export default function NewProductForm({
   updateData = {},
 }) {
   console.log(updateData);
+  const initialContent = updateData?.productcontent ?? "";
   const initialImageUrl = updateData?.imageUrl ?? "";
   const initialTags = updateData?.tags ?? [];
   const id = updateData?.id ?? "";
@@ -47,6 +55,9 @@ export default function NewProductForm({
   const isActive = watch("isActive");
   const isWholesale = watch("isWholesale");
   console.log(isActive);
+  // Quill Editor
+  const [productcontent, setProductContent] = useState(initialContent);
+  //Quill EDITOR END
   const router = useRouter();
   function redirect() {
     router.push("/dashboard/products");
@@ -58,6 +69,7 @@ export default function NewProductForm({
     const productCode = generateUserCode("LLP", data.title);
     data.slug = slug;
     data.productImages = productImages;
+    data.productcontent = productcontent;
     data.tags = tags;
     data.qty = 1;
     data.productCode = productCode;
@@ -84,6 +96,7 @@ export default function NewProductForm({
       );
       setProductImages([]);
       setTags([]);
+      setProductContent([]);
     }
   }
   return (
@@ -204,6 +217,13 @@ export default function NewProductForm({
           register={register}
           errors={errors}
         />
+        {/* Content */}
+        <QuillEditor
+          label="Product Content"
+          value={productcontent}
+          onChange={setProductContent}
+        />
+        {/* Content End */}
         <ToggleInput
           label="Publish your Product"
           name="isActive"

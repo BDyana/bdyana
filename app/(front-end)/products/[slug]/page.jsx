@@ -1,4 +1,5 @@
 "use client";
+import TrainingHtml from "@/components/TrainingHtml";
 import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import AddToCartButton from "@/components/frontend/AddToCartButton";
 import Breadcrumb from "@/components/frontend/Breadcrumb";
@@ -28,7 +29,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
         <Breadcrumb />
       </div>
       <div className="grid grid-cols-12 gap-4">
-        <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm">
+        <div className="bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm pb-8">
           <div className="w-full md:w-5/12">
             <ProductImageCarousel
               productImages={product.productImages}
@@ -53,6 +54,9 @@ export default async function ProductDetailPage({ params: { slug } }) {
             <div className="border-b border-gray-300">
               <h4><b>SPECIFICATION : </b></h4>
               <p className="py-2 ">{product.description}</p>
+              <div className="py-8">
+                <TrainingHtml content={product.content} />
+              </div>
               <div className="flex items-center gap-8 mb-4 justify-between">
                 <h4>SKU: {product.sku}</h4>
                 <p className="py-1.5 px-4 border rounded-full text-slate-900 ">

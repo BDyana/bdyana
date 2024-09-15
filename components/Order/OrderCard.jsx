@@ -23,14 +23,14 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Order Number
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   #{order.orderNumber}
                 </p>
               </div>
 
               <div>
                 <p className="text-sm font-medium text-gray-500">Date</p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   {orderCreationDate}
                 </p>
               </div>
@@ -38,7 +38,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Quantity
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   {/* {item.quantity} */}
                 </p>
               </div>
@@ -46,7 +46,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Total Amount
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   ৳ {subTotal}
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function OrderCard({ order }) {
                     <li key={i} className="relative flex pb-10 sm:pb-0">
                       <div className="flex-shrink-0">
                         <img
-                          className="object-cover rounded-lg w-20 h-20"
+                          className="object-cover rounded-lg w-10 h-10"
                           src={item.imageUrl}
                           alt={item.title}
                         />
@@ -151,7 +151,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Name: 
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   {order.firstName} {order.lastName}
                 </p>
               </div>
@@ -159,7 +159,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Email Address: 
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   {order.email}
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Mobile No: 
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                   {order.phone}
                 </p>
               </div>
@@ -175,7 +175,7 @@ export default function OrderCard({ order }) {
                 <p className="text-sm font-medium text-gray-500">
                   Shipping Address: 
                 </p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">
+                <p className="text-sm font-bold text-gray-900">
                 {order.streetAddress} {order.city} {order.country}
                 </p>
               </div>
