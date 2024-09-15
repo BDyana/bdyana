@@ -12,7 +12,6 @@ import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
 
-
 export default async function ProductDetailPage({ params: { slug } }) {
   const product = await getData(`products/product/${slug}`);
   const { id } = product;

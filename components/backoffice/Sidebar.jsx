@@ -276,17 +276,17 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
                   : "text-md flex items-center space-x-2 px-4 py-1 text-sm"
               }
             >
-              <Icon className="w-4 h-4" />
+              <Icon className="w-4 h-4"/>
               <span>{item.title}</span>
             </Link>
           );
         })}
-        <div className="px-6 py-2">
+        <div className="p-4">
           <button
             onClick={handleLogout}
-            className="bg-lime-600 rounded-md flex items-center space-x-3 px-6 py-3"
+            className="bg-gray-800 text-white rounded-md flex items-center space-x-3 px-4 py-2"
           >
-            <LogOut />
+            <LogOut className="w-4 h-4"/>
             <span>Logout</span>
           </button>
         </div>
