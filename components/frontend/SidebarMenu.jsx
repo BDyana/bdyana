@@ -26,36 +26,30 @@ export default async function SidebarCategories() {
             <li className="py-1 hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
             </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
           </ul>
         </li>
-        <li className="">
+        <li className="group">
           <Link href="https://www.bdyana.com/category/gadget-accessories"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Building2 className="text-slate-500" size={16} />
             <span className="text-sm">Garments & Accessories</span>
           </Link>
+          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
+            <h2>Thread/Yarn</h2>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Wool Thread</Link>
+            </li>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Samarian Thread</Link>
+            </li>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Malaikot Thread</Link>
+            </li>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Lacchi Thread</Link>
+            </li>
+          </ul>
         </li>
         <li className="">
           <Link href="https://www.bdyana.com/category/computer-hardware"

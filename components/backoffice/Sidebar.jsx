@@ -201,8 +201,8 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
     <div
       className={
         showSidebar
-          ? "sm:block mt-20 sm:mt-0 dark:bg-slate-800 bg-white space-y-6 w-50 h-screen text-slate-800 dark:text-slate-300  fixed left-0 top-0 shadow-md overflow-y-scroll"
-          : "mt-20 sm:mt-0 hidden sm:block dark:bg-slate-800 bg-whit h-screen text-slate-800 dark:text-slate-300  fixed left-0 top-0 shadow-md overflow-y-scroll"
+          ? "sm:block mt-20 sm:mt-0 dark:bg-slate-800 bg-white space-y-6 w-50 h-screen text-slate-800 dark:text-slate-300 fixed left-0 top-0 shadow-md overflow-y-scroll"
+          : "mt-20 sm:mt-0 hidden sm:block dark:bg-slate-800 bg-whit h-screen text-slate-800 dark:text-slate-300 fixed left-0 top-0 shadow-md overflow-y-scroll"
       }
     >
       <Link
@@ -219,7 +219,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
           className={
             pathname === "/dashboard"
               ? "flex items-center space-x-2 px-2 py-1 text-lime-500"
-              : "flex items-center space-x-2 px-4 py-1 "
+              : "flex items-center space-x-3 px-4 py-1"
           }
         >
           <LayoutGrid className="w-4 h-4" />
@@ -231,7 +231,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className=""
               onClick={() => setOpenMenu(!openMenu)}
             >
-              <button className="flex items-center space-x-6 py-2 ">
+              <button className="flex items-center space-x-6 py-2">
                 <div className="flex items-center space-x-3">
                   <Slack className="w-4 h-4" />
                   <span>Catalogue</span>
@@ -273,7 +273,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className={
                 item.href == pathname
                   ? "flex items-center space-x-2 p-2 border-l-8 border-lime-500 text-lime-500"
-                  : "text-md flex items-center space-x-2 px-4 py-1 text-sm"
+                  : "flex items-center space-x-3 px-4 py-1"
               }
             >
               <Icon className="w-4 h-4"/>
@@ -286,7 +286,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
             onClick={handleLogout}
             className="bg-gray-800 text-white rounded-md flex items-center space-x-3 px-4 py-2"
           >
-            <LogOut className="w-4 h-4"/>
+            <LogOut className="w-4 h-4" />
             <span>Logout</span>
           </button>
         </div>
