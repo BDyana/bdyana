@@ -36,17 +36,17 @@ export default async function SidebarCategories() {
             <span className="text-sm">Garments & Accessories</span>
           </Link>
           <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
-            <h2>Thread/Yarn</h2>
-            <li className="py-1 hover:text-blue-700">
+            <h3 className="mb-1">Thread/Yarn</h3>
+            <li className="hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Wool Thread</Link>
             </li>
-            <li className="py-1 hover:text-blue-700">
+            <li className="hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Samarian Thread</Link>
             </li>
-            <li className="py-1 hover:text-blue-700">
+            <li className="hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Malaikot Thread</Link>
             </li>
-            <li className="py-1 hover:text-blue-700">
+            <li className="hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Lacchi Thread</Link>
             </li>
           </ul>
@@ -75,13 +75,28 @@ export default async function SidebarCategories() {
             <span className="text-sm">Men's Fashion</span>
           </Link>
         </li>
-        <li className="">
+        <li className="group">
           <Link href=""
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
            <BookHeart className="text-slate-500" size={16} />
             <span className="text-sm">Women's & Girls' Fashion</span>
           </Link>
+          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
+            <h3 className="mb-1">Ladies Bag</h3>
+            <li className="hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Party Bag</Link>
+            </li>
+            <li className="hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Canvas Bag</Link>
+            </li>
+            <li className="hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Hand Bag</Link>
+            </li>
+            <li className="hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="">Casual Bag</Link>
+            </li>
+          </ul>
         </li>
         <li className="group">
           <Link href="https://www.bdyana.com/category/beauty-bodycare"
