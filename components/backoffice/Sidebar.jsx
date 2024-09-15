@@ -202,24 +202,24 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
       className={
         showSidebar
           ? "sm:block mt-20 sm:mt-0 dark:bg-slate-800 bg-white space-y-6 w-50 h-screen text-slate-800 dark:text-slate-300  fixed left-0 top-0 shadow-md overflow-y-scroll"
-          : " mt-20 sm:mt-0 hidden sm:block dark:bg-slate-800 bg-whit w-60 h-screen text-slate-800 dark:text-slate-300  fixed left-0 top-0 shadow-md overflow-y-scroll"
+          : "mt-20 sm:mt-0 hidden sm:block dark:bg-slate-800 bg-whit h-screen text-slate-800 dark:text-slate-300  fixed left-0 top-0 shadow-md overflow-y-scroll"
       }
     >
       <Link
         onClick={() => setShowSidebar(false)}
-        className="px-6 py-4"
+        className="p-3"
         href="/dashboard"
       >
         <Image src={logo} alt="BDyana logo" className="w-36" />
       </Link>
-      <div className="flex flex-col  ">
+      <div className="flex flex-col">
         <Link
           onClick={() => setShowSidebar(false)}
           href="/dashboard"
           className={
             pathname === "/dashboard"
               ? "flex items-center space-x-2 px-2 py-1 text-lime-500"
-              : "flex items-center space-x-2 py-1 "
+              : "flex items-center space-x-2 px-4 py-1 "
           }
         >
           <LayoutGrid className="w-4 h-4" />
@@ -240,7 +240,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               </button>
             </CollapsibleTrigger>
 
-            <CollapsibleContent className="rrounded-lg px-3 dark:bg-slate-800 dark:text-slate-300">
+            <CollapsibleContent className="rounded-lg px-3 dark:bg-slate-800 dark:text-slate-300">
               {catalogueLinks.map((item, i) => {
                 const Icon = item.icon;
                 return (
@@ -273,7 +273,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className={
                 item.href == pathname
                   ? "flex items-center space-x-2 p-2 border-l-8 border-lime-500 text-lime-500"
-                  : "text-md flex items-center space-x-2 px-2 py-1 text-sm"
+                  : "text-md flex items-center space-x-2 px-4 py-1 text-sm"
               }
             >
               <Icon className="w-4 h-4" />
