@@ -54,7 +54,7 @@ export default async function ProductDetailPage({ params: { slug } }) {
               <h4><b>SPECIFICATION : </b></h4>
               <p className="py-2 ">{product.description}</p>
               <div className="py-8">
-                <TrainingHtml content={product.content} />
+              <TrainingHtml content={product.productcontent} />
               </div>
               <div className="flex items-center gap-8 mb-4 justify-between">
                 <h4>SKU: {product.sku}</h4>

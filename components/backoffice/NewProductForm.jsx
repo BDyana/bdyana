@@ -69,7 +69,7 @@ export default function NewProductForm({
     const productCode = generateUserCode("LLP", data.title);
     data.slug = slug;
     data.productImages = productImages;
-    data.productcontent = productcontent;
+    data.content = productcontent;
     data.tags = tags;
     data.qty = 1;
     data.productCode = productCode;

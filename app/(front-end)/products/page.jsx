@@ -30,7 +30,7 @@ export default async function AllProducts({
                     </div>
                 ))}
             </div>
-            <div className="p-8 mx-auto flex items-center justify-center  w-full">
+            <div className="p-8 mx-auto flex items-center justify-center w-full">
                 <Paginate totalPages={totalPages} isSearch={isSearch} />
             </div>
         </div>

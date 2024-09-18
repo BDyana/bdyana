@@ -79,6 +79,7 @@ model Product {
   imageUrl       String?
   productImages  String[]
   description    String?
+  content        String?
   isActive       Boolean
   isWholesale    Boolean
   sku            String?
