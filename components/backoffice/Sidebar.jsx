@@ -207,7 +207,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
     >
       <Link
         onClick={() => setShowSidebar(false)}
-        className="p-3"
+        className="p-3 flex"
         href="/dashboard"
       >
         <Image src={logo} alt="BDyana logo" className="w-36" />

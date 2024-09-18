@@ -19,8 +19,8 @@ export default async function Category() {
   // console.log(categories);
   return (
     <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
-      <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
-        Shop By Category
+      <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100 text-center">
+        All Categories
       </h2>
       <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
@@ -29,16 +29,9 @@ export default async function Category() {
               <Link
                 key={i}
                 href={`/category/${category.slug}`}
-                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md py-4"
+                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-sm px-1 py-2 text-left"
               >
-                <Image
-                  width={500}
-                  height={500}
-                  className="w-16 h-16 rounded-full object-cover m-auto"
-                  src={category.imageUrl}
-                  alt={category.title}
-                />
-                <span className="text-sm block mt-4">{category.title}</span>
+                <span className="text-sm block">{category.title}</span>
               </Link>
             );
           })}
