@@ -15,13 +15,13 @@ import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-// import dynamic from "next/dynamic";
-// const QuillEditor = dynamic(
-//   () => import("@/components/FormInputs/QuillEditor"),
-//   {
-//     ssr: false,
-//   }
-// );
+import dynamic from "next/dynamic";
+const QuillEditor = dynamic(
+  () => import("@/components/FormInputs/QuillEditor"),
+  {
+    ssr: false,
+  }
+);
 import MultipleImageInput from "../FormInputs/MultipleImageInput";
 
 export default function NewProductForm({
