@@ -2,6 +2,7 @@ import { getData } from "@/lib/getData";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { MoveRight } from 'lucide-react';
 
 export default async function CategoryGrid() {
   const categoriesData = await getData("categories");
@@ -19,9 +20,11 @@ export default async function CategoryGrid() {
   // console.log(categories);
   return (
     <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
-      <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100">
-        Shop By Category
-      </h2>
+      <div className="dark:bg-gray-800 pt-2 pl-2 dark:border-gray-600 text-slate-800 dark:text-slate-100 flex justify-between items-center border-b border-gray-200 dark:border-gray-600">
+      <h2 className="pl-3 pb-2 pt-0.5 font-semibold text-slate-800 dark:text-slate-100">Shop By Category</h2>        
+        <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center"
+          href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
+        </div>
       <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {

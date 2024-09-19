@@ -12,7 +12,7 @@ export default function FilterComponent({ category, products }) {
   return (
     <div>
       <div className="bg-white space-y-2 text-slate-900 py-6 px-2">
-        <Breadcrumb title={title} resultCount={productCount} />
+        {/* <Breadcrumb title={title} resultCount={productCount} /> */}
         <Sorting isSearch={category?.isSearch} title={title} slug={slug} />
       </div>
       <div className="grid grid-cols-12 py-8 gap-4">

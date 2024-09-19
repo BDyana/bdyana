@@ -18,17 +18,24 @@ export default async function Hero() {
       </div>
       <div className="col-span-2 hidden sm:block bg-white dark:bg-slate-800 rounded-sm p-3">
         <Link href="#" className="flex items-center space-x-1 mb-5">
+        <CircleDollarSign className="shrink-0 w-5 h-5 dark:text-lime-500 text-slate-900" />
+          <div className="flex flex-col">
+            <h2 className="uppercase text-sm">Wholesale Available</h2>
+            <p className="text-[0.75rem]">Call for Details.</p>
+          </div>
+        </Link>
+        <Link href="#" className="flex items-center space-x-1 mb-5">
           <HelpCircle className="shrink-0 w-5 h-5 dark:text-lime-500 text-slate-900" />
           <div className="flex flex-col">
             <h2 className="uppercase text-sm">Help Center</h2>
-            <p className="text-[0.6rem]">Guide to Customer Care</p>
+            <p className="text-[0.75rem]">Guide to Customer Care</p>
           </div>
         </Link>
         <Link href="#" className="flex items-center space-x-1 mb-5">
           <FolderSync className="shrink-0 w-5 h-5 dark:text-lime-500 text-slate-900" />
           <div className="flex flex-col">
             <h2 className="uppercase text-sm">Easy Return</h2>
-            <p className="text-[0.6rem]">Quick Return</p>
+            <p className="text-[0.75rem]">Quick Return</p>
           </div>
         </Link>
         <Link
@@ -38,7 +45,7 @@ export default async function Hero() {
           <CircleDollarSign className="shrink-0 w-5 h-5 dark:text-lime-500 text-slate-900" />
           <div className="flex flex-col">
             <h2 className="uppercase text-sm">Sell on BDyana</h2>
-            <p className="text-[0.6rem]">Million of Vistors</p>
+            <p className="text-[0.75rem]">Million of Vistors</p>
           </div>
         </Link>
         {/* <Image src={advert} alt="advert" className="w-full rounded-lg" /> */}
