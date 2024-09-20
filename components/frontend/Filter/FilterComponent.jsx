@@ -15,7 +15,7 @@ export default function FilterComponent({ category, products }) {
         {/* <Breadcrumb title={title} resultCount={productCount} /> */}
         <Sorting isSearch={category?.isSearch} title={title} slug={slug} />
       </div>
-      <div className="grid grid-cols-12 py-8 gap-4">
+      <div className="grid grid-cols-12 py-8 gap-1">
         <div className="col-span-2 hidden md:flex bg-white p-2 rounded-sm">
           <Filters slug={slug} isSearch={category?.isSearch} />
         </div>
