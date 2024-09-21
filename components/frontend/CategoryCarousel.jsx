@@ -24,7 +24,7 @@ export default function   CategoryCarousel({ products, isMarketPage = false }) {
       breakpoint: { max: 464, min: 0 },
       items: 2,
       slidesToSlide: 1,
-      partialVisibilityGutter: 10,
+      partialVisibilityGutter: 20,
     },
   };
   return (
