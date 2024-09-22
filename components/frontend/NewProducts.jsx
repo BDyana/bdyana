@@ -15,10 +15,10 @@ export default function NewProduct() {
   }, []);
 
   return (
-    <div className="pt-8 pb-4">
+    <div className="lg:pt-8 pt-6 pb-4">
       <h2 className="text-xl">New Arrivals</h2>
       <h4>100+ products added today</h4>
-      <div className="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-4 mt-3">
+      <div className="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-4 lg:mt-3 mt-1.5">
       {productsList.map((product) => (
         <div key={product.id}>
           <Product product={product}/>
