@@ -9,7 +9,7 @@ export default function CartCount() {
   return (
     <Link
       href="/cart"
-      className="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-transparent rounded-lg "
+      className="relative inline-flex items-center mt-2 pb-1 p-3 text-sm font-medium text-center text-white bg-transparent rounded-lg"
     >
       <ShoppingCart className="text-slate-700 dark:text-lime-500" />
       <span className="sr-only">Cart</span>
