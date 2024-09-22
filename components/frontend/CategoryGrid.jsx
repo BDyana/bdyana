@@ -20,7 +20,7 @@ export default async function CategoryGrid() {
   // console.log(categories);
   return (
     <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
-      <div className="dark:bg-gray-800 pt-2 pl-2 dark:border-gray-600 text-slate-800 dark:text-slate-100 flex justify-between items-center border-b border-gray-200 dark:border-gray-600">
+      <div className="dark:bg-gray-800 pt-2 pl-2 text-slate-800 dark:text-slate-100 flex justify-between items-center border-b border-gray-200 dark:border-gray-600">
       <h2 className="pl-3 pb-2 pt-0.5 font-semibold text-slate-800 dark:text-slate-100">Shop By Category</h2>        
         <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center"
           href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
@@ -32,16 +32,16 @@ export default async function CategoryGrid() {
               <Link
                 key={i}
                 href={`/category/${category.slug}`}
-                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md py-6"
+                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md lg:py-6 py-3"
               >
                 <Image
                   width={500}
                   height={500}
-                  className="w-16 h-16 rounded-full object-cover m-auto"
+                  className="lg:w-16 w-11 lg:h-16 h-11 rounded-full object-cover m-auto"
                   src={category.imageUrl}
                   alt={category.title}
                 />
-                <span className="text-sm block mt-4">{category.title}</span>
+                <p className="lg:mt-4 mt-2.5 line-clamp-1">{category.title}</p>
               </Link>
             );
           })}

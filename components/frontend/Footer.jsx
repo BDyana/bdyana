@@ -6,15 +6,12 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-8 lg:gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <img className="w-auto h-9" src="/Logo.png" alt="" />
-
             <p className="lg:text-base text-sm leading-relaxed text-gray-600 my-3 lg:mt-7">
               Best Online E-Commerce Website in Bangladesh. You can Buy
               your Essential Products with Best Price. Happy Shopping...
             </p>
             <h3><b>Helpline:</b> 01511- 309 309</h3>
-
-            <ul className="flex items-center space-x-3 mt-5">
-
+            <ul className="flex items-center space-x-3 lg:mt-5 mt-3">
               <li>
                 <a
                   href="https://www.facebook.com/BDyana.com.bd"
@@ -47,7 +44,6 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -66,7 +62,6 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -89,12 +84,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Company
             </p>
-
             <ul className="mt-4 lg:mt-6 lg:space-y-4 space-y-2">
               <li>
                 <a
@@ -106,7 +99,6 @@ const Footer = () => {
                   About{" "}
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -117,7 +109,6 @@ const Footer = () => {
                   Features{" "}
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -128,7 +119,6 @@ const Footer = () => {
                   Works{" "}
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -141,17 +131,14 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Help
             </p>
-
             <ul className="mt-4 lg:mt-6 lg:space-y-4 space-y-2">
               <li>
               <HelpModal />
               </li>
-
               <li>
                 <a
                   href="#"
@@ -162,7 +149,6 @@ const Footer = () => {
                   Delivery Details{" "}
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -173,7 +159,6 @@ const Footer = () => {
                   Terms & Conditions{" "}
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -186,12 +171,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Subscribe to newsletter
             </p>
-
             <form action="#" method="POST" className="mt-4 lg:mt-6 flex gap-2">
               <div>
                 <label htmlFor="email" className="sr-only">
@@ -205,7 +188,6 @@ const Footer = () => {
                   className="flex w-auto px-3 py-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-gray-600 caret-gray-600"
                 />
               </div>
-
               <button
                 type="submit"
                 className="items-center justify-center px-3 py-2 font-semibold bg-gray-700 hover:bg-gray-900 text-white transition-all duration-200 rounded-md focus:bg-blue-700"
@@ -215,9 +197,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
-
         <hr className="mt-6 mb-4 lg:mt-12 lg:mb-5 border-gray-200" />
-
         <p className="text-sm text-center text-gray-600">
           © Copyright 2024, All Rights Reserved by <b>BDyana</b>
         </p>
