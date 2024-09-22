@@ -38,7 +38,7 @@ export default async function SidebarCategories() {
           <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
             <h3 className="mb-1">Thread/Yarn</h3>
             <li className="hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Wool Thread</Link>
+              <Link href="https://www.bdyana.com/category/wool-thread" className="hover:text-blue-700" >Wool Thread</Link>
             </li>
             <li className="hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Samarian Thread</Link>
