@@ -7,7 +7,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <img className="w-auto h-9" src="/Logo.png" alt="" />
 
-            <p className="text-base leading-relaxed text-gray-600 my-3 lg:mt-7">
+            <p className="lg:text-base text-sm leading-relaxed text-gray-600 my-3 lg:mt-7">
               Best Online E-Commerce Website in Bangladesh. You can Buy
               your Essential Products with Best Price. Happy Shopping...
             </p>
@@ -100,7 +100,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   About{" "}
@@ -111,7 +111,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Features{" "}
@@ -122,7 +122,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Works{" "}
@@ -133,7 +133,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Career{" "}
@@ -156,7 +156,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Delivery Details{" "}
@@ -167,7 +167,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Terms & Conditions{" "}
@@ -178,7 +178,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex lg:text-base text-sm text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                 >
                   {" "}
                   Privacy Policy{" "}

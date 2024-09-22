@@ -22,14 +22,14 @@ export default async function Category() {
       <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100 text-center">
         All Categories
       </h2>
-      <div className="grid sm:grid-cols-7 grid-cols-4 text-center items-center gap-1 lg:px-2">
+      <div className="grid sm:grid-cols-7 grid-cols-3 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {
             return (
               <Link
                 key={i}
                 href={`/category/${category.slug}`}
-                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-sm px-1 py-2 text-left"
+                className="gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-sm px-1 py-2"
               >
                 <span className="text-sm block">{category.title}</span>
               </Link>
