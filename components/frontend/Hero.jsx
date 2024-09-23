@@ -13,7 +13,7 @@ export default async function Hero() {
   return (
     <div className="grid grid-cols-12 gap-4">
       <SidebarMenu />
-      <div className="col-span-full sm:col-span-7 bg-blue-600 rounded-sm">
+      <div className="col-span-full sm:col-span-7 bg-gray-500 rounded-sm">
         <HeroCarousel banners={banners} />
       </div>
       <div className="col-span-2 hidden sm:block bg-white dark:bg-slate-800 rounded-sm p-3">

@@ -18,7 +18,7 @@ export default function HelpModal() {
       {/* <Button onClick={() => setOpenModal(true)}>Toggle modal</Button> */}
       <button
         onClick={() => setOpenModal(true)}
-        className="flex items-center space-x-1 text-green-950 dark:text-slate-100"
+        className="text-sm flex items-center space-x-1 text-green-950 dark:text-slate-100"
       >
         <span>Help</span>
       </button>
