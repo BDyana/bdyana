@@ -24,7 +24,7 @@ export default async function Home() {
       <CategoryGrid />
       {categories.map((category, i) => {
         return (
-          <div className="pb-4" key={i}>
+          <div className="lg:pb-4 pb-2" key={i}>
             <CategoryList isMarketPage={false} category={category} />
           </div>
         );

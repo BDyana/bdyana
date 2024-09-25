@@ -22,8 +22,7 @@ export default async function CategoryGrid() {
     <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
       <div className="dark:bg-gray-800 pt-2 pl-2 text-slate-800 dark:text-slate-100 flex justify-between items-center border-b border-gray-200 dark:border-gray-600">
       <h2 className="pl-3 pb-2 pt-0.5 font-semibold text-slate-800 dark:text-slate-100">Shop By Category</h2>        
-        <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center"
-          href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
+        <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center" target="_blank" href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
         </div>
       <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
@@ -32,7 +31,7 @@ export default async function CategoryGrid() {
               <Link
                 key={i}
                 href={`/category/${category.slug}`}
-                className="gap-3 hover:bg-slate-50 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md lg:py-6 py-3.5"
+                className="gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md lg:py-6 py-3.5"
               >
                 <Image
                   width={500}

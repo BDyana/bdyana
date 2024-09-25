@@ -218,8 +218,8 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
           href="/dashboard"
           className={
             pathname === "/dashboard"
-              ? "flex items-center space-x-2 px-2 py-1 text-lime-500"
-              : "flex items-center space-x-3 px-4 py-1"
+              ? "flex items-center space-x-2 px-2 py-1 text-lime-500 text-sm font-medium"
+              : "flex items-center space-x-3 px-4 py-1 text-sm font-medium"
           }
         >
           <LayoutGrid className="w-4 h-4" />
@@ -231,8 +231,8 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className=""
               onClick={() => setOpenMenu(!openMenu)}
             >
-              <button className="flex items-center space-x-6 py-2">
-                <div className="flex items-center space-x-3">
+              <button className="flex items-center space-x-6 py-2 text-sm font-medium">
+                <div className="flex items-center space-x-3 text-sm font-medium">
                   <Slack className="w-4 h-4" />
                   <span>Catalogue</span>
                 </div>
@@ -250,7 +250,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
                     href={item.href}
                     className={
                       pathname === item.href
-                        ? "flex items-center space-x-2 py-1 text-lime-500"
+                        ? "flex items-center space-x-2 py-1 text-lime-500 text-sm font-medium"
                         : "flex items-center space-x-2 py-1 text-sm"
                     }
                   >
@@ -273,7 +273,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
               className={
                 item.href == pathname
                   ? "flex items-center space-x-2 p-2 border-l-8 border-lime-500 text-lime-500"
-                  : "flex items-center space-x-3 px-4 py-1"
+                  : "flex items-center space-x-3 px-4 py-1 text-sm font-medium"
               }
             >
               <Icon className="w-4 h-4"/>

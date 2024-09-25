@@ -22,7 +22,7 @@ export default async function Category() {
       <h2 className="py-3 px-4 font-semibold border-b border-gray-200 dark:border-gray-600 text-slate-800 dark:text-slate-100 text-center">
         All Categories
       </h2>
-      <div className="grid sm:grid-cols-7 grid-cols-3 text-center items-center gap-1 lg:px-2">
+      <div className="grid sm:grid-cols-7 grid-cols-2 text-center items-center gap-1 lg:px-2">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {
             return (
