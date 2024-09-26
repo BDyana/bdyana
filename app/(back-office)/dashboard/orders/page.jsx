@@ -10,6 +10,11 @@ export default async function page() {
   const session = await getServerSession(authOptions);
   if (!session) return;
   const userId = session?.user?.id;
+<<<<<<< HEAD
+=======
+  // console.log(userId);
+
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   if (orders.length === 0 || !orders) {
     return <p>No Orders Yet</p>;
   }

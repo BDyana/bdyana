@@ -5,6 +5,10 @@ import React from "react";
 
 export default async function UpdateBanner({ params: { id } }) {
   const banner = await getData(`banners/${id}`);
+<<<<<<< HEAD
+=======
+  // console.log(banner);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   return (
     <div>
       <FormHeader title="Update Banner" />

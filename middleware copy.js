@@ -29,6 +29,11 @@ export async function middleware(request) {
       return response;
     }
     if (!sessionToken) {
+<<<<<<< HEAD
+=======
+      // console.log("No sessionToken");
+      // If the user is already on the login page, continue
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
       if (request.nextUrl.pathname === "/login") {
         return NextResponse.next();
       }

@@ -24,12 +24,20 @@ export default function NewProductForm({
   farmers,
   updateData = {},
 }) {
+<<<<<<< HEAD
+=======
+  // console.log("Updated Data:", updateData);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   const initialContent = updateData?.content ?? "";
   const initialImageUrl = updateData?.imageUrl ?? "";
   const initialTags = updateData?.tags ?? [];
   const id = updateData?.id ?? "";
   const [imageUrl, setImageUrl] = useState(initialImageUrl);
   const [tags, setTags] = useState(initialTags);
+<<<<<<< HEAD
+=======
+  // console.log(tags);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -46,12 +54,25 @@ export default function NewProductForm({
   });
   const isActive = watch("isActive");
   const isWholesale = watch("isWholesale");
+<<<<<<< HEAD
   const [productcontent, setProductContent] = useState(initialContent);
+=======
+  // console.log(isActive);
+  // Quill Editor
+  const [productcontent, setProductContent] = useState(initialContent);
+
+  // console.log("Product Content From Quill Editor:", productcontent);
+  //Quill EDITOR END
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   const router = useRouter();
   function redirect() {
     router.push("/dashboard/products");
   }
   const [productImages, setProductImages] = useState([]);
+<<<<<<< HEAD
+=======
+  // console.log(productImages);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   async function onSubmit(data) {
     const slug = generateSlug(data.title);
     const productCode = generateUserCode("LLP", data.title);
@@ -71,6 +92,10 @@ export default function NewProductForm({
         "Product",
         redirect
       );
+<<<<<<< HEAD
+=======
+      // console.log("update Request: ", data);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     } else {
       makePostRequest(
         setLoading,

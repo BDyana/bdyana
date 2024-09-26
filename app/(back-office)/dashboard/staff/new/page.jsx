@@ -38,6 +38,10 @@ export default function NewStaff() {
     */
     const code = generateUserCode("LSM", data.name);
     data.code = code;
+<<<<<<< HEAD
+=======
+    // console.log(data);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     makePostRequest(setLoading, "api/staffs", data, "Staff", reset);
   }
   return (

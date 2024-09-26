@@ -16,6 +16,10 @@ export default async function page() {
   const id = session?.user?.id;
   const farmerProducts = allProducts.filter((product) => product.userId === id);
 
+<<<<<<< HEAD
+=======
+  // console.log(id);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   return (
     <div>
       {/* Header */}

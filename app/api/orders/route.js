@@ -78,6 +78,12 @@ export async function POST(request) {
       );
       return { newOrder, newOrderItems, sales };
     });
+<<<<<<< HEAD
+=======
+
+    // console.log(result.newOrder, result.newOrderItems, result.sales);
+
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     // Return the response
     return NextResponse.json(result.newOrder);
   } catch (error) {

@@ -14,6 +14,10 @@ export const getLatestProducts = async (pageSize) => {
       },
       take: pageSize,
     });
+<<<<<<< HEAD
+=======
+    // console.log("Product Length", products.length);
+>>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     return products;
   } catch (error) {
     console.error("Error while fetching lastest products", error);
