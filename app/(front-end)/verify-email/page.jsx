@@ -1,12 +1,10 @@
 import { getData } from "@/lib/getData";
 import { Info } from "lucide-react";
 import React from "react";
-
 export default async function VerifyMail({ searchParams }) {
   const { userId } = searchParams;
   const user = await getData(`users/${userId}`);
   const { email } = user;
-  console.log(userId);
   return (
     <div className="max-w-2xl mx-auto min-h-screen mt-8">
       <div

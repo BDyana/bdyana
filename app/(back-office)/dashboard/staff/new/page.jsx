@@ -1,22 +1,16 @@
 "use client";
-import ImageInput from "@/components/FormInputs/ImageInput";
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextareaInput from "@/components/FormInputs/TextAreaInput";
 import TextInput from "@/components/FormInputs/TextInput";
 import ToggleInput from "@/components/FormInputs/ToggleInput";
 import FormHeader from "@/components/backoffice/FormHeader";
 import { makePostRequest } from "@/lib/apiRequest";
-import { generateCouponCode } from "@/lib/generateCouponCode";
-import { generateSlug } from "@/lib/generateSlug";
 import { generateUserCode } from "@/lib/generateUserCode";
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-
 export default function NewStaff() {
   const [loading, setLoading] = useState(false);
   const [couponCode, setCouponCode] = useState();
-
   const {
     register,
     reset,
@@ -44,7 +38,6 @@ export default function NewStaff() {
     */
     const code = generateUserCode("LSM", data.name);
     data.code = code;
-    console.log(data);
     makePostRequest(setLoading, "api/staffs", data, "Staff", reset);
   }
   return (
@@ -99,15 +92,13 @@ export default function NewStaff() {
             errors={errors}
             className="w-full"
           />
-
-          <TextInput
+           <TextInput
             label="Staff's Physical Address"
             name="physicalAddress"
             register={register}
             errors={errors}
             className="w-full"
           />
-
           <TextareaInput
             label="Notes"
             name="notes"
@@ -123,7 +114,6 @@ export default function NewStaff() {
             register={register}
           />
         </div>
-
         <SubmitButton
           isLoading={loading}
           buttonTitle="Create Staff"

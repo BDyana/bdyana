@@ -1,6 +1,5 @@
 import db from "@/lib/db";
 import { NextResponse } from "next/server";
-
 export async function POST(request) {
   try {
     const { title, couponCode, expiryDate, isActive, vendorId } =
@@ -14,7 +13,6 @@ export async function POST(request) {
         vendorId,
       },
     });
-    console.log(newCoupon);
     return NextResponse.json(newCoupon);
   } catch (error) {
     console.log(error);
@@ -27,7 +25,6 @@ export async function POST(request) {
     );
   }
 }
-
 export async function GET(request) {
   try {
     const coupons = await db.coupon.findMany({

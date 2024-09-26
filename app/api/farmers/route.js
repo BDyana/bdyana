@@ -1,6 +1,5 @@
 import db from "@/lib/db";
 import { NextResponse } from "next/server";
-
 export async function POST(request) {
   try {
     /*
@@ -64,7 +63,6 @@ export async function POST(request) {
         userId: farmerData.userId,
       },
     });
-    console.log(newFarmerProfile);
     return NextResponse.json(newFarmerProfile);
   } catch (error) {
     console.log(error);

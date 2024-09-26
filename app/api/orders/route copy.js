@@ -21,12 +21,10 @@ export async function POST(request) {
     function generateOrderNumber(length) {
       const characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       let orderNumber = "";
-
       for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * characters.length);
         orderNumber += characters.charAt(randomIndex);
       }
-
       return orderNumber;
     }
     const newOrder = await db.order.create({
@@ -45,7 +43,6 @@ export async function POST(request) {
         orderNumber: generateOrderNumber(8),
       },
     });
-
     //Create Order Item
     const newOrderItems = await prisma.orderItem.createMany({
       data: orderItems.map((item) => ({
@@ -58,7 +55,6 @@ export async function POST(request) {
         title: item.title,
       })),
     });
-    console.log(newOrder, newOrderItems);
     return NextResponse.json(newOrder);
   } catch (error) {
     console.log(error);
@@ -71,7 +67,6 @@ export async function POST(request) {
     );
   }
 }
-
 export async function GET(request) {
   try {
     const orders = await db.order.findMany({
