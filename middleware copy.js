@@ -40,7 +40,7 @@ export async function middleware(request) {
 
     // If there is no sessionToken, redirect to the login page
     if (!sessionToken) {
-      console.log("No sessionToken");
+      // console.log("No sessionToken");
       // If the user is already on the login page, continue
       if (request.nextUrl.pathname === "/login") {
         return NextResponse.next();

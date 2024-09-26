@@ -6,7 +6,7 @@ export default async function VerifyMail({ searchParams }) {
   const { userId } = searchParams;
   const user = await getData(`users/${userId}`);
   const { email } = user;
-  console.log(userId);
+  // console.log(userId);
   return (
     <div className="max-w-2xl mx-auto min-h-screen mt-8">
       <div

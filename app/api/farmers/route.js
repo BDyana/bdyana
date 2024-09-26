@@ -64,7 +64,7 @@ export async function POST(request) {
         userId: farmerData.userId,
       },
     });
-    console.log(newFarmerProfile);
+    // console.log(newFarmerProfile);
     return NextResponse.json(newFarmerProfile);
   } catch (error) {
     console.log(error);

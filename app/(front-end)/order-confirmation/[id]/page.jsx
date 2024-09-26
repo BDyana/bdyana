@@ -11,7 +11,7 @@ export default async function page({ params: { id } }) {
   const subTotal = orderItems
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
-  console.log(order);
+  // console.log(order);
   return (
     <section className="py-12 dark:bg-slate-950 bg-slate-50 sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl">

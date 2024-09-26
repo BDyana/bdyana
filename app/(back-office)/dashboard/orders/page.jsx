@@ -12,7 +12,7 @@ export default async function page() {
   if (!session) return;
 
   const userId = session?.user?.id;
-  console.log(userId);
+  // console.log(userId);
 
   if (orders.length === 0 || !orders) {
     return <p>No Orders Yet</p>;

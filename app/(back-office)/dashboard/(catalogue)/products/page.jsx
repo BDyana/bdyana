@@ -20,7 +20,7 @@ export default async function page() {
   const id = session?.user?.id;
   const farmerProducts = allProducts.filter((product) => product.userId === id);
 
-  console.log(id);
+  // console.log(id);
   return (
     <div>
       {/* Header */}

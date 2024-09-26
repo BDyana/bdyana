@@ -14,7 +14,7 @@ export async function POST(request) {
         vendorId,
       },
     });
-    console.log(newCoupon);
+    // console.log(newCoupon);
     return NextResponse.json(newCoupon);
   } catch (error) {
     console.log(error);
