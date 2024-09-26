@@ -24,7 +24,7 @@ export default async function CategoryGrid() {
       <h2 className="pl-3 pb-2 pt-0.5 font-semibold text-slate-800 dark:text-slate-100">Shop By Category</h2>        
         <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center" target="_blank" href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
         </div>
-      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2">
+      <div className="grid sm:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2 lg:py-2 py-3">
         {newCategories.length > 0 &&
           newCategories.map((category, i) => {
             return (
