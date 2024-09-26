@@ -12,10 +12,6 @@ export default async function Home() {
 
   const trainings = await getData("trainings");
   const session = await getServerSession(authOptions);
-<<<<<<< HEAD
-=======
-  // console.log(session?.user);
->>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
   return (
     <div className="min-h-screen">
       <Hero />

@@ -70,10 +70,6 @@ export async function POST(request) {
         // },
       },
     });
-<<<<<<< HEAD
-=======
-    // console.log(newProduct);
->>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     return NextResponse.json(newProduct);
   } catch (error) {
     console.log(error);

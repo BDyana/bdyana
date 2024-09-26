@@ -13,10 +13,6 @@ export async function POST(request) {
         vendorId,
       },
     });
-<<<<<<< HEAD
-=======
-    // console.log(newCoupon);
->>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     return NextResponse.json(newCoupon);
   } catch (error) {
     console.log(error);

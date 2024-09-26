@@ -12,10 +12,6 @@ export async function POST(request) {
         isActive,
       },
     });
-<<<<<<< HEAD
-=======
-    // console.log(newBanner);
->>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     return NextResponse.json(newBanner);
   } catch (error) {
     console.log(error);

@@ -55,10 +55,6 @@ export async function POST(request) {
         title: item.title,
       })),
     });
-<<<<<<< HEAD
-=======
-    // console.log(newOrder, newOrderItems);
->>>>>>> fbe612953c2fcf2680eaee0cd3799976f94d839c
     return NextResponse.json(newOrder);
   } catch (error) {
     console.log(error);
