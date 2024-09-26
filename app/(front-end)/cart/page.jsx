@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 export default function Cart() {
   const cartItems = useSelector((store) => store.cart);
-  console.log(cartItems);
+  // console.log(cartItems);
   const subTotal =
     cartItems
       .reduce((acc, currentItem) => {
@@ -20,12 +20,12 @@ export default function Cart() {
       }, 0)
       .toFixed(2) ?? 0;
 
-  console.log(subTotal);
+  // console.log(subTotal);
   return (
     <div>
       <Breadcrumb />
       {cartItems.length > 0 ? (
-        <div className="grid grid-cols-12 gap-6 md:gap-14 ">
+        <div className='grid grid-cols-12 gap-6 md:gap-14 '>
           <CartItems cartItems={cartItems} />
           <CartSubTotalCard subTotal={subTotal} />
         </div>

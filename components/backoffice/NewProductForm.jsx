@@ -29,15 +29,15 @@ export default function NewProductForm({
   farmers,
   updateData = {},
 }) {
-  console.log(updateData);
-  const initialContent = updateData?.productcontent ?? "";
+  // console.log("Updated Data:", updateData);
+  const initialContent = updateData?.content ?? "";
   const initialImageUrl = updateData?.imageUrl ?? "";
   const initialTags = updateData?.tags ?? [];
   const id = updateData?.id ?? "";
   const [imageUrl, setImageUrl] = useState(initialImageUrl);
   // TAGS
   const [tags, setTags] = useState(initialTags);
-  console.log(tags);
+  // console.log(tags);
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -54,16 +54,18 @@ export default function NewProductForm({
   });
   const isActive = watch("isActive");
   const isWholesale = watch("isWholesale");
-  console.log(isActive);
+  // console.log(isActive);
   // Quill Editor
   const [productcontent, setProductContent] = useState(initialContent);
+
+  // console.log("Product Content From Quill Editor:", productcontent);
   //Quill EDITOR END
   const router = useRouter();
   function redirect() {
     router.push("/dashboard/products");
   }
   const [productImages, setProductImages] = useState([]);
-  console.log(productImages);
+  // console.log(productImages);
   async function onSubmit(data) {
     const slug = generateSlug(data.title);
     const productCode = generateUserCode("LLP", data.title);
@@ -73,7 +75,7 @@ export default function NewProductForm({
     data.tags = tags;
     data.qty = 1;
     data.productCode = productCode;
-    console.log(data);
+    // console.log(data);
     if (id) {
       data.id = id;
       // Make Put Request (Update)
@@ -84,7 +86,7 @@ export default function NewProductForm({
         "Product",
         redirect
       );
-      console.log("update Request: ", data);
+      // console.log("update Request: ", data);
     } else {
       makePostRequest(
         setLoading,
@@ -102,102 +104,102 @@ export default function NewProductForm({
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full max-w-4xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mx-auto my-3 "
+      className='w-full max-w-4xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mx-auto my-3 '
     >
-      <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+      <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
         <TextInput
-          label="Product Title"
-          name="title"
+          label='Product Title'
+          name='title'
           register={register}
           errors={errors}
         />
         <TextInput
-          label="Product SKU"
-          name="sku"
+          label='Product SKU'
+          name='sku'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
         />
 
         <TextInput
-          label="Product Barcode"
-          name="barcode"
+          label='Product Barcode'
+          name='barcode'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
         />
         <TextInput
-          label="Product Price (Before Discount)"
-          name="productPrice"
-          type="number"
+          label='Product Price (Before Discount)'
+          name='productPrice'
+          type='number'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
         />
         <TextInput
-          label="Product Sale Price(Discounted)"
-          name="salePrice"
+          label='Product Sale Price(Discounted)'
+          name='salePrice'
           register={register}
           errors={errors}
-          type="number"
-          className="w-full"
+          type='number'
+          className='w-full'
         />
         <TextInput
-          label="Product Stock"
-          name="productStock"
+          label='Product Stock'
+          name='productStock'
           register={register}
           errors={errors}
-          type="number"
-          className="w-full"
+          type='number'
+          className='w-full'
         />
         <TextInput
-          label="Unit of Measurement(eg Kilograms)"
-          name="unit"
+          label='Unit of Measurement(eg Kilograms)'
+          name='unit'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
         />
         <SelectInput
-          label="Select Category"
-          name="categoryId"
+          label='Select Category'
+          name='categoryId'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
           options={categories}
         />
         <SelectInput
-          label="Select Farmer"
-          name="farmerId"
+          label='Select Farmer'
+          name='farmerId'
           register={register}
           errors={errors}
-          className="w-full"
+          className='w-full'
           options={farmers}
         />
         <ToggleInput
-          label="Supports Wholesale Selling"
-          name="isWholesale"
-          trueTitle="Supported"
-          falseTitle="Not Supported"
+          label='Supports Wholesale Selling'
+          name='isWholesale'
+          trueTitle='Supported'
+          falseTitle='Not Supported'
           register={register}
         />
 
         {isWholesale && (
           <>
             <TextInput
-              label="Wholesale Price"
-              name="wholesalePrice"
+              label='Wholesale Price'
+              name='wholesalePrice'
               register={register}
               errors={errors}
-              type="number"
-              className="w-full"
+              type='number'
+              className='w-full'
             />
             <TextInput
-              label="Minimum Wholesale Qty"
-              name="wholesaleQty"
+              label='Minimum Wholesale Qty'
+              name='wholesaleQty'
               register={register}
               errors={errors}
-              type="number"
-              className="w-full"
+              type='number'
+              className='w-full'
             />
           </>
         )}
@@ -205,30 +207,30 @@ export default function NewProductForm({
         <MultipleImageInput
           imageUrls={productImages}
           setImageUrls={setProductImages}
-          endpoint="multipleProductsUploader"
-          label="Product Image Images"
+          endpoint='multipleProductsUploader'
+          label='Product Image Images'
         />
         {/* Tags */}
-        <ArrayItemsInput setItems={setTags} items={tags} itemTitle="Tag" />
+        <ArrayItemsInput setItems={setTags} items={tags} itemTitle='Tag' />
 
         <TextareaInput
-          label="Product Description"
-          name="description"
+          label='Product Description'
+          name='description'
           register={register}
           errors={errors}
         />
         {/* Content */}
         <QuillEditor
-          label="Product Content"
+          label='Product Content'
           value={productcontent}
           onChange={setProductContent}
         />
         {/* Content End */}
         <ToggleInput
-          label="Publish your Product"
-          name="isActive"
-          trueTitle="Active"
-          falseTitle="Draft"
+          label='Publish your Product'
+          name='isActive'
+          trueTitle='Active'
+          falseTitle='Draft'
           register={register}
         />
       </div>

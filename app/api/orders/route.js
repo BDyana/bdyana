@@ -88,7 +88,7 @@ export async function POST(request) {
       return { newOrder, newOrderItems, sales };
     });
 
-    console.log(result.newOrder, result.newOrderItems, result.sales);
+    // console.log(result.newOrder, result.newOrderItems, result.sales);
 
     // Return the response
     return NextResponse.json(result.newOrder);

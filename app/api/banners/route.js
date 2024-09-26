@@ -12,7 +12,7 @@ export async function POST(request) {
         isActive,
       },
     });
-    console.log(newBanner);
+    // console.log(newBanner);
     return NextResponse.json(newBanner);
   } catch (error) {
     console.log(error);

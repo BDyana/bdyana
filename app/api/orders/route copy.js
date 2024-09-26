@@ -58,7 +58,7 @@ export async function POST(request) {
         title: item.title,
       })),
     });
-    console.log(newOrder, newOrderItems);
+    // console.log(newOrder, newOrderItems);
     return NextResponse.json(newOrder);
   } catch (error) {
     console.log(error);

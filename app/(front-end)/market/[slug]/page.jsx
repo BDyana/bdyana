@@ -17,7 +17,7 @@ export default async function page({ params: { slug } }) {
   const marketCategories = categories.filter((category) =>
     marketCategoryIds.includes(category.id)
   );
-  console.log(marketCategories);
+  // console.log(marketCategories);
   return (
     <>
       <Breadcrumb />
