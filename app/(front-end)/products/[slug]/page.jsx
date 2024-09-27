@@ -28,14 +28,14 @@ export default async function ProductDetailPage({ params: { slug } }) {
         <Breadcrumb />
       </div>
       <div className="grid grid-cols-12 gap-4">
-        <div className='bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm pb-8'>
+        <div className='bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm pb-5'>
           <div className="w-full md:w-5/12">
             <ProductImageCarousel
               productImages={product.productImages}
               thumbnail={product.imageUrl}
             />
           </div>
-          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3 pb-5">
+          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3">
             <div className="flex items-center justify-between mt-3">
               <h1>{product.title}</h1>
             </div>
