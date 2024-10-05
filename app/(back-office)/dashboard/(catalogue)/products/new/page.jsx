@@ -11,7 +11,8 @@ export default async function NewProduct() {
   if (!categoriesData || !usersData) {
     return <div>Loading...</div>;
   }
-  const farmersData = usersData?.filter((user) => user.role === "FARMER") ?? [];
+  // const farmersData = usersData?.filter((user) => user.role === "FARMER") ?? [];
+  const farmersData = [];
   const farmers = farmersData?.map((farmer) => {
     return {
       id: farmer.id,
