@@ -6,10 +6,10 @@ import Carousel from "nuka-carousel";
 
 export default function HeroCarousel({ banners }) {
   const config = {
-    nextButtonClassName: "rounded-full",
+    nextButtonClassName: "rounded-full hidden lg:flex",
     nextButtonText: <ChevronRight />,
     pagingDotsClassName: "me-2 w-4 h-4",
-    prevButtonClassName: "rounded-full",
+    prevButtonClassName: "rounded-full hidden lg:flex",
     prevButtonText: <ChevronLeft />,
   };
   return (
