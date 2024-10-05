@@ -12,14 +12,14 @@ export default async function NewProduct() {
     return <div>Loading...</div>;
   }
   const farmersData = usersData?.filter((user) => user.role === "FARMER") ?? [];
-  const farmers = farmersData.map((farmer) => {
+  const farmers = farmersData?.map((farmer) => {
     return {
       id: farmer.id,
       title: farmer.name,
     };
   });
   // console.log(farmers);
-  const categories = categoriesData.map((category) => {
+  const categories = categoriesData?.map((category) => {
     return {
       id: category.id,
       title: category.title,
