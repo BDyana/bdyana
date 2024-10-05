@@ -1,18 +1,14 @@
 "use client";
-import ImageInput from "@/components/FormInputs/ImageInput";
 import ArrayItemsInput from "@/components/FormInputs/ArrayItemsInput";
 import SelectInput from "@/components/FormInputs/SelectInput";
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextareaInput from "@/components/FormInputs/TextAreaInput";
 import TextInput from "@/components/FormInputs/TextInput";
 import ToggleInput from "@/components/FormInputs/ToggleInput";
-import FormHeader from "@/components/backoffice/FormHeader";
 import { makePostRequest, makePutRequest } from "@/lib/apiRequest";
 import { generateSlug } from "@/lib/generateSlug";
 import { generateUserCode } from "@/lib/generateUserCode";
-import { Plus, X } from "lucide-react";
 import { useRouter } from "next/navigation";
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import dynamic from "next/dynamic";
@@ -23,21 +19,17 @@ const QuillEditor = dynamic(
   }
 );
 import MultipleImageInput from "../FormInputs/MultipleImageInput";
-
 export default function NewProductForm({
   categories,
   farmers,
   updateData = {},
 }) {
-  // console.log("Updated Data:", updateData);
   const initialContent = updateData?.content ?? "";
   const initialImageUrl = updateData?.imageUrl ?? "";
   const initialTags = updateData?.tags ?? [];
   const id = updateData?.id ?? "";
   const [imageUrl, setImageUrl] = useState(initialImageUrl);
-  // TAGS
   const [tags, setTags] = useState(initialTags);
-  // console.log(tags);
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -54,18 +46,12 @@ export default function NewProductForm({
   });
   const isActive = watch("isActive");
   const isWholesale = watch("isWholesale");
-  // console.log(isActive);
-  // Quill Editor
   const [productcontent, setProductContent] = useState(initialContent);
-
-  // console.log("Product Content From Quill Editor:", productcontent);
-  //Quill EDITOR END
   const router = useRouter();
   function redirect() {
     router.push("/dashboard/products");
   }
   const [productImages, setProductImages] = useState([]);
-  // console.log(productImages);
   async function onSubmit(data) {
     const slug = generateSlug(data.title);
     const productCode = generateUserCode("LLP", data.title);
@@ -78,7 +64,6 @@ export default function NewProductForm({
     // console.log(data);
     if (id) {
       data.id = id;
-      // Make Put Request (Update)
       makePutRequest(
         setLoading,
         `api/products/${id}`,
@@ -86,7 +71,6 @@ export default function NewProductForm({
         "Product",
         redirect
       );
-      // console.log("update Request: ", data);
     } else {
       makePostRequest(
         setLoading,
@@ -234,7 +218,6 @@ export default function NewProductForm({
           register={register}
         />
       </div>
-
       <SubmitButton
         isLoading={loading}
         buttonTitle={id ? "Update Product" : "Create Product"}

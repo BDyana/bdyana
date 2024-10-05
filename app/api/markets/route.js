@@ -22,7 +22,6 @@ export async function POST(request) {
     const newMarket = await db.market.create({
       data: { title, slug, logoUrl, description, isActive, categoryIds },
     });
-    // console.log(newMarket);
     return NextResponse.json(newMarket);
   } catch (error) {
     console.log(error);

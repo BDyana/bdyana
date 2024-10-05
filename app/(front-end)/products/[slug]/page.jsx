@@ -24,22 +24,22 @@ export default async function ProductDetailPage({ params: { slug } }) {
   const targetDate = "2024-09-01T00:00:00Z";
   return (
     <div>
-      <div className='hidden lg:flex'>
+      <div className="hidden lg:flex">
         <Breadcrumb />
       </div>
-      <div className='grid grid-cols-12 gap-4'>
-        <div className='bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm pb-8'>
-          <div className='w-full md:w-5/12'>
+      <div className="grid grid-cols-12 gap-4">
+        <div className='bg-white col-span-12 md:col-span-9 md:flex border border-gray-100 rounded-sm pb-5'>
+          <div className="w-full md:w-5/12">
             <ProductImageCarousel
               productImages={product.productImages}
               thumbnail={product.imageUrl}
             />
           </div>
-          <div className='w-full md:w-7/12 ml-2 lg:ml-5 pr-3 pb-5'>
-            <div className='flex items-center justify-between mt-3'>
+          <div className="w-full md:w-7/12 ml-2 lg:ml-5 pr-3">
+            <div className="flex items-center justify-between mt-3">
               <h1>{product.title}</h1>
             </div>
-            <div className='flex gap-3 mt-2 mb-8'>
+            <div className="flex gap-3 mt-2 mb-8">
               <div>
                 <h4>
                   Cateogory :{" "}
@@ -56,12 +56,9 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 <p><b>Brand :</b> Brand Name</p>
               </div> */}
             </div>
-            <div className='border-b border-gray-300'>
-              <h4>
-                <b>SPECIFICATION : </b>
-              </h4>
-              <p className='py-2 '>{product.description}</p>
-              <div className='py-8'>
+            <div className="border-b border-gray-300">
+              <h4><b>SPECIFICATION : </b></h4>
+              <div className="py-2">
                 <TrainingHtml content={product.content} />
               </div>
               <div className='flex items-center gap-8 mb-4 justify-between'>
@@ -71,7 +68,6 @@ export default async function ProductDetailPage({ params: { slug } }) {
                 </p>
               </div>
             </div>
-            <flashsale />
             <div className='flex items-center gap-3 pt-4 border-b border-gray-200 pb-4'>
               <div className='gap-3 flex items-end'>
                 <h4 className='text-2xl font-bold'>BDT {product.salePrice}</h4>

@@ -17,20 +17,16 @@ export async function POST(request) {
       streetAddress,
       userId,
     } = checkoutFormData;
-
     // Create orderNumber function
     function generateOrderNumber(length) {
       const characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       let orderNumber = "";
-
       for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * characters.length);
         orderNumber += characters.charAt(randomIndex);
       }
-
       return orderNumber;
     }
-
     // Use the Prisma transaction
     const result = await db.$transaction(async (prisma) => {
       // Create order and order items within the transaction
@@ -50,7 +46,6 @@ export async function POST(request) {
           orderNumber: generateOrderNumber(8),
         },
       });
-
       const newOrderItems = await prisma.orderItem.createMany({
         data: orderItems.map((item) => ({
           productId: item.id,
@@ -62,12 +57,10 @@ export async function POST(request) {
           title: item.title,
         })),
       });
-
       // Calculate total amount for each product and create a sale for each
       const sales = await Promise.all(
         orderItems.map(async (item) => {
           const totalAmount = parseFloat(item.salePrice) * parseInt(item.qty);
-
           const newSale = await prisma.sale.create({
             data: {
               orderId: newOrder.id,
@@ -80,16 +73,11 @@ export async function POST(request) {
               total: totalAmount,
             },
           });
-
           return newSale;
         })
       );
-
       return { newOrder, newOrderItems, sales };
     });
-
-    // console.log(result.newOrder, result.newOrderItems, result.sales);
-
     // Return the response
     return NextResponse.json(result.newOrder);
   } catch (error) {

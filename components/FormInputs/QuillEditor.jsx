@@ -10,10 +10,11 @@ export default function QuillEditor({
 }) {
   const modules = {
     toolbar: [
-      [{ header: [1, 2, false] }],
+      [{ header: [1, 2, 3, false] }],
       ["bold", "italic", "underline", "strike", "blockquote"],
-      [{ list: "ordered" }, { list: "bullet" }],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
       ["link", "color", "image"],
+      [{ 'align': [] }],
       [{ "code-block": true }],
       ["clean"],
     ],
@@ -33,6 +34,7 @@ export default function QuillEditor({
     "code-block",
     "color",
   ];
+  //Quill Custom Tool Bar
   return (
     <div className={className}>
       <label

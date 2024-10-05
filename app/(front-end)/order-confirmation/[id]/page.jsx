@@ -1,17 +1,14 @@
 import { getData } from "@/lib/getData";
-import { Item } from "@radix-ui/react-dropdown-menu";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 export default async function page({ params: { id } }) {
   const order = await getData(`orders/${id}`);
   const { orderItems } = order;
   const subTotal = orderItems
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
-  // console.log(order);
   return (
     <section className="py-12 dark:bg-slate-950 bg-slate-50 sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl">
@@ -25,7 +22,6 @@ export default async function page({ params: { id } }) {
                 View invoice
               </Link>
             </div>
-
             <div className="px-4 py-6 sm:px-8 sm:py-10">
               <div className="-my-8 divide-y divide-gray-200">
                 <div className="pt-16 pb-8 text-center sm:py-8">
@@ -39,7 +35,6 @@ export default async function page({ params: { id } }) {
                     ship
                   </p>
                 </div>
-
                 <div className="py-8">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-x-20">
                     <div>
@@ -55,7 +50,6 @@ export default async function page({ params: { id } }) {
                         {order.country}
                       </p>
                     </div>
-
                     <div>
                       <h2 className="text-xs font-bold tracking-widest text-gray-400 uppercase dark:text-gray-500">
                         Payment Info
@@ -63,20 +57,13 @@ export default async function page({ params: { id } }) {
                       <p className="mt-6 text-sm font-medium text-gray-600 dark:text-gray-300">
                         {order.paymentMethod}
                       </p>
-                      {/* <p className="mt-1 text-sm font-medium text-gray-600">
-                        VISA
-                        <br />
-                        **** 4660
-                      </p> */}
                     </div>
                   </div>
                 </div>
-
                 <div className="py-8">
                   <h2 className="text-xs font-bold tracking-widest text-gray-400 uppercase dark:text-gray-500">
                     Order Items
                   </h2>
-
                   <div className="flow-root mt-8">
                     <ul className="divide-y divide-gray-200 -my-5">
                       {orderItems.length > 0 &&
@@ -96,7 +83,6 @@ export default async function page({ params: { id } }) {
                                     alt={item.title}
                                   />
                                 </div>
-
                                 <div className="flex flex-col justify-between ml-5 w-44">
                                   <p className="flex-1 text-sm font-bold text-gray-900 dark:text-gray-300">
                                     {item.title}
@@ -106,7 +92,6 @@ export default async function page({ params: { id } }) {
                                   </p>
                                 </div>
                               </div>
-
                               <div className="ml-auto">
                                 <p className="text-sm font-bold text-right text-gray-900 dark:text-gray-300">
                                   ${(item.price * item.quantity).toFixed(2)}
@@ -118,7 +103,6 @@ export default async function page({ params: { id } }) {
                     </ul>
                   </div>
                 </div>
-
                 <div className="py-8">
                   <ul className="space-y-4">
                     <li className="flex items-center justify-between">

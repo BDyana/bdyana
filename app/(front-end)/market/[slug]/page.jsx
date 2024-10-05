@@ -2,14 +2,11 @@ import Breadcrumb from "@/components/frontend/Breadcrumb";
 import CategoryList from "@/components/frontend/CategoryList";
 import { getData } from "@/lib/getData";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-
 export default async function page({ params: { slug } }) {
   const market = await getData(`markets/details/${slug}`);
   const marketCategoryIds = market.categoryIds;
   // console.log(marketCategoryIds);
-
   const categoriesData = await getData("categories");
   const categories = categoriesData.filter((category) => {
     return category.products.length > 3;
@@ -17,7 +14,6 @@ export default async function page({ params: { slug } }) {
   const marketCategories = categories.filter((category) =>
     marketCategoryIds.includes(category.id)
   );
-  // console.log(marketCategories);
   return (
     <>
       <Breadcrumb />

@@ -1,6 +1,5 @@
 import db from "@/lib/db";
 import { NextResponse } from "next/server";
-
 export async function POST(request) {
   try {
     const {
@@ -71,7 +70,6 @@ export async function POST(request) {
         // },
       },
     });
-    // console.log(newProduct);
     return NextResponse.json(newProduct);
   } catch (error) {
     console.log(error);
