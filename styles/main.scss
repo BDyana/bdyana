@@ -58,6 +58,88 @@ p {
 }
 .swiper-initialized {box-shadow: 0px 0 1px #aaa; margin-bottom: 8px;}
 .swiper-slide-thumb-active {border: 2px solid #aaa;}
+
+
+/* styles/FlashSale.module.css */
+
+.flashSaleContainer {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+.flashSaleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #39a313;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.flashSaleTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeLeft {
+  font-size: 14px;
+}
+
+.flashSaleDetails {
+  padding: 15px;
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.discountedPrice {
+  font-size: 24px;
+  font-weight: bold;
+  color: #39a313;
+}
+
+.originalPrice {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discountPercentage {
+  font-size: 16px;
+  color: #ff9f00;
+  background-color: #fff2e6;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.itemsLeft {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.progressBar {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #39a313;
+  height: 100%;
+}
+
+/* End FlashSale.module.css */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
