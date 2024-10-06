@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import styles from '../../../styles/main.scss';
+import styles from '../../../styles/main';
 
 const FlashSale = () => {
   // Sale time and product data
