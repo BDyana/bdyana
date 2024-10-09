@@ -1,4 +1,4 @@
-import { ChevronRight, Factory, Building2, Laptop, Cpu, BookHeart, Luggage, Microwave, Trophy, Baby, AlignJustify, Cable, PawPrint, } from "lucide-react";
+import { ChevronRight, Factory, Building2, Laptop, Cpu, BookHeart, Luggage, Microwave, Trophy, AlignJustify, Cable, PawPrint, ShoppingBasket, } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export default async function SidebarCategories() {
       
       <div className="py-2 h-[350px] flex flex-col gap-2 text-sm relative">
         <ul className="">
-        <li className="group">
+        <li className="">
           <Link href="https://www.bdyana.com/category/industrial-machineries"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
@@ -19,14 +19,14 @@ export default async function SidebarCategories() {
             <span className="text-sm">Industrial Machineries</span>
             <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
           </Link>
-          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
+          {/* <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
             <li className="py-1">
               <Link className="hover:text-black transition-all" href="">Home Appliancce</Link>
             </li>
             <li className="py-1 hover:text-blue-700">
               <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li className="group">
           <Link href="https://www.bdyana.com/category/gadget-accessories"
@@ -107,7 +107,7 @@ export default async function SidebarCategories() {
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
            <PawPrint className="text-slate-500" size={16} />
-            <span className="text-sm">Beauty & Bodycare</span>
+            <span className="text-sm">Mothers & Kids</span>
             <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
           </Link>
           <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
@@ -116,13 +116,23 @@ export default async function SidebarCategories() {
             </li>
           </ul>
         </li>
-        <li className="">
+        <li className="group">
           <Link href=""
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
-            <Baby className="text-slate-500" size={16} />
-            <span className="text-sm">Mothers & Kids</span>
+            <ShoppingBasket className="text-slate-500" size={16} />
+            <span className="text-sm">Grocery & Beverage</span>
+            <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
           </Link>
+          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
+          <h3 className="mb-1">Baby Food</h3>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="https://www.bdyana.com/category/lactogen">Lactogen</Link>
+            </li>
+            <li className="py-1 hover:text-blue-700">
+              <Link className="hover:text-blue-700" href="https://www.bdyana.com/category/cerelac">Cerelac</Link>
+            </li>
+          </ul>
         </li>
         <li className="">
           <Link href=""

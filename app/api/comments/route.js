@@ -1,30 +1,42 @@
-import { v4 as uuidv4 } from 'uuid';
+// pages/api/comments.js
+import { MongoClient } from "mongodb";
 
-// In-memory storage (for demo purposes; replace with a database in production)
-let comments = [];
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    const { name, rating, comment } = req.body;
 
-export default function handler(req, res) {
-  const { method } = req;
+    if (!name || !rating || !comment) {
+      return res.status(400).json({ message: "All fields are required." });
+    }
 
-  switch (method) {
-    case 'GET':
-      res.status(200).json(comments);
-      break;
-    case 'POST':
-      const { productId, userName, rating, comment } = req.body;
-      const newComment = {
-        id: uuidv4(),
-        productId,
-        userName,
-        rating,
-        comment,
-        createdAt: new Date().toISOString(),
-      };
-      comments.push(newComment);
-      res.status(201).json(newComment);
-      break;
-    default:
-      res.setHeader('Allow', ['GET', 'POST']);
-      res.status(405).end(`Method ${method} Not Allowed`);
+    const client = await MongoClient.connect(process.env.MONGODB_URI);
+    const db = client.db();
+
+    const commentsCollection = db.collection("comments");
+    await commentsCollection.insertOne({
+      name,
+      rating,
+      comment,
+      createdAt: new Date(),
+    });
+
+    client.close();
+
+    res.status(201).json({ message: "Comment added!" });
+  }
+
+  if (req.method === "GET") {
+    const client = await MongoClient.connect(process.env.MONGODB_URI);
+    const db = client.db();
+
+    const commentsCollection = db.collection("comments");
+    const comments = await commentsCollection
+      .find()
+      .sort({ createdAt: -1 })
+      .toArray();
+
+    client.close();
+
+    res.status(200).json(comments);
   }
 }

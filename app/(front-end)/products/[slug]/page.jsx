@@ -230,6 +230,6 @@ export default async function ProductDetailPage({ params: { slug } }) {
         </h2>
         <CategoryCarousel products={products} />
       </div>
-    </div>
-  );
-}
+      </div>
+    )
+  };
