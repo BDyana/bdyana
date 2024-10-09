@@ -20,38 +20,38 @@ export default function OrderCard({ order }) {
           <div className="px-4 py-6 sm:p-6 lg:p-2">
             <div className="flex grid grid-cols-2 gap-2 md:grid-cols-5">
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Order Number
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   #{order.orderNumber}
                 </p>
               </div>
 
               <div>
-                <p className="text-sm font-medium text-gray-500">Date</p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>Date</p>
+                <p>
                   {orderCreationDate}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Quantity
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   {/* {item.quantity} */}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Total Amount
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   ৳ {subTotal}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Order Status
                 </p>
                 <div className="mt-0.5 flex items-center">
@@ -114,21 +114,21 @@ export default function OrderCard({ order }) {
                             <Link
                               href={`/products/${slug}`}
                               title={item.title}
-                              className="p-1 -m-1 text-sm font-medium text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                              className="p-1 -m-1 text-sm text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                             >
                               {" "}
                               View Product{" "}
                             </Link>
                           <button
                             type="button"
-                            className="p-1 -m-1 text-sm font-medium text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                            className="p-1 -m-1 text-sm text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                           >
                             View Order
                           </button>
 
                           <Link
                             href={`/dashboard/orders/${order.id}/invoice`}
-                            className="p-1 -m-1 text-sm font-medium text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                            className="p-1 -m-1 text-sm text-gray-500 transition-all duration-200 rounded hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                           >
                             View Invoice
                           </Link>
@@ -146,34 +146,34 @@ export default function OrderCard({ order }) {
               </p>
               <div className="flex grid grid-cols-2 gap-2 md:grid-cols-4">
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Name: 
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   {order.firstName} {order.lastName}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Email Address: 
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   {order.email}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Mobile No: 
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                   {order.phone}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p>
                   Shipping Address: 
                 </p>
-                <p className="text-sm font-bold text-gray-900">
+                <p>
                 {order.streetAddress} {order.city} {order.country}
                 </p>
               </div>
