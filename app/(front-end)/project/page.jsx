@@ -1,5 +1,8 @@
-export default function KnittingCrochet() {
+export default async function Projectpage() {
     return (
-        <div>All Project</div>
-    )
+        <div>
+            <h2>All Project</h2>
+        </div>
+
+    );
 }
