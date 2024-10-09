@@ -39,7 +39,7 @@ export default function OrderCard({ order }) {
                   Quantity
                 </p>
                 <p className="text-sm font-bold text-gray-900">
-                  {/* {item.quantity} */}
+                   {item.quantity}
                 </p>
               </div>
               <div>
@@ -99,15 +99,22 @@ export default function OrderCard({ order }) {
                       <div className="flex flex-col justify-between flex-1 ml-5">
                         <div className="sm:grid sm:grid-cols-2 sm:gap-x-5">
                           <div>
-                            <p className="text-base font-bold text-gray-900">
-                              {item.title}
-                            </p>
+                            <p>{item.title}</p>
                           </div>
-
                           <div className="mt-4 sm:mt-0 flex items-center justify-between">
                             <p className=" text-sm font-medium text-gray-500 me-4">
-                              {item.quantity}
+                              Seller Details:
                             </p>
+                            <div className="flex grid grid-cols-2 gap-2 md:grid-cols-4">
+                              <div>
+                                <p className="text-sm font-medium text-gray-500">
+                                  Name: 
+                                </p>
+                                <p className="text-sm font-bold text-gray-900">
+                                  {order.firstName} {order.lastName}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
@@ -147,14 +154,14 @@ export default function OrderCard({ order }) {
                 Customer Details
               </p>
               <div className="flex grid grid-cols-2 gap-2 md:grid-cols-4">
-              <div>
-                <p className="text-sm font-medium text-gray-500">
-                  Name: 
-                </p>
-                <p className="text-sm font-bold text-gray-900">
-                  {order.firstName} {order.lastName}
-                </p>
-              </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-500">
+                    Name: 
+                  </p>
+                  <p className="text-sm font-bold text-gray-900">
+                    {order.firstName} {order.lastName}
+                  </p>
+                </div>
               <div>
                 <p className="text-sm font-medium text-gray-500">
                   Email Address: 

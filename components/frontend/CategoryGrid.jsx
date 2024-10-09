@@ -31,7 +31,7 @@ export default async function CategoryGrid() {
               <Link
                 key={i}
                 href={`/category/${category.slug}`}
-                className="gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md lg:py-6 py-3.5"
+                className="gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600 rounded-md lg:py-6 py-4"
               >
                 <Image
                   width={500}
