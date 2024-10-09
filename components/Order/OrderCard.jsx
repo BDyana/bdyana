@@ -99,9 +99,7 @@ export default function OrderCard({ order }) {
                       <div className="flex flex-col justify-between flex-1 ml-5">
                         <div className="sm:grid sm:grid-cols-2 sm:gap-x-5">
                           <div>
-                            <p className="text-base font-bold text-gray-900">
-                              {item.title}
-                            </p>
+                            <p>{item.title}</p>
                           </div>
 
                           <div className="mt-4 sm:mt-0 flex items-center justify-between">

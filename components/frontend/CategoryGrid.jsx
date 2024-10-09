@@ -16,7 +16,7 @@ export default async function CategoryGrid() {
     return shuffled.slice(0, count);
   };
 
-  const newCategories = selectRandomCategories(categories, 16);
+  const newCategories = selectRandomCategories(categories, 24);
   // console.log(categories);
   return (
     <div className="bg-white border border-gray-300 rounded-sm dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden mb-4">
