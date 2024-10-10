@@ -103,7 +103,7 @@ export default async function SidebarCategories() {
           </ul>
         </li>
         <li className="group">
-          <Link href="https://www.bdyana.com/category/beauty-bodycare"
+          <Link href="https://www.bdyana.com/project/mothers-kids"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
            <PawPrint className="text-slate-500" size={16} />
