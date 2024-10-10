@@ -12,7 +12,7 @@ export default async function SidebarCategories() {
       <div className="py-2 h-[350px] flex flex-col gap-2 text-sm relative">
         <ul className="">
         <li className="">
-          <Link href="https://www.bdyana.com/category/industrial-machineries"
+          <Link href="https://www.bdyana.com/project/industrial-machineries"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Factory className="text-slate-500" size={16} />
@@ -29,7 +29,7 @@ export default async function SidebarCategories() {
           </ul> */}
         </li>
         <li className="group">
-          <Link href="https://www.bdyana.com/category/gadget-accessories"
+          <Link href="https://www.bdyana.com/project/garments-accessories"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Building2 className="text-slate-500" size={16} />
@@ -56,7 +56,7 @@ export default async function SidebarCategories() {
           </ul>
         </li>
         <li className="">
-          <Link href="https://www.bdyana.com/category/computer-hardware"
+          <Link href="https://www.bdyana.com/project/computer-hardware"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Laptop className="text-slate-500" size={16} />
@@ -64,7 +64,7 @@ export default async function SidebarCategories() {
           </Link>
         </li>
         <li className="">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/gadget-accessories"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Cpu className="text-slate-500" size={16} />
@@ -72,7 +72,7 @@ export default async function SidebarCategories() {
           </Link>
         </li>
         <li className="">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/mens-fashion"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Luggage className="text-slate-500" size={16} />
@@ -80,7 +80,7 @@ export default async function SidebarCategories() {
           </Link>
         </li>
         <li className="group">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/womens-girls-fashion"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
            <BookHeart className="text-slate-500" size={16} />
@@ -111,20 +111,6 @@ export default async function SidebarCategories() {
             <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
           </Link>
           <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
-            <li className="py-1 hover:text-blue-700">
-              <Link className="hover:text-blue-700" href="">Home Appliancce</Link>
-            </li>
-          </ul>
-        </li>
-        <li className="group">
-          <Link href=""
-            className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
-          >
-            <ShoppingBasket className="text-slate-500" size={16} />
-            <span className="text-sm">Grocery & Beverage</span>
-            <ChevronRight className="mr-1 shrink-0 w-4 h-4 dark:text-lime-500 text-slate-400 right-0 absolute hidden group-hover:block" />
-          </Link>
-          <ul className="absolute left-[275px] top-0 z-10 w-full px-3 py-1 bg-white h-[340px] hidden group-hover:block">
           <h3 className="mb-1">Baby Food</h3>
             <li className="py-1 hover:text-blue-700">
               <Link className="hover:text-blue-700" href="https://www.bdyana.com/category/lactogen">Lactogen</Link>
@@ -135,7 +121,15 @@ export default async function SidebarCategories() {
           </ul>
         </li>
         <li className="">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/grocery-beverage"
+            className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
+          >
+            <ShoppingBasket className="text-slate-500" size={16} />
+            <span className="text-sm">Grocery & Beverage</span>
+          </Link>
+        </li>
+        <li className="">
+          <Link href="https://www.bdyana.com/project/home-appliance"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Microwave className="text-slate-500" size={16} />
@@ -143,7 +137,7 @@ export default async function SidebarCategories() {
           </Link>
         </li>
         <li className="">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/electronics-device"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Cable className="text-slate-500" size={16} />
@@ -151,7 +145,7 @@ export default async function SidebarCategories() {
           </Link>
         </li>
         <li className="">
-          <Link href=""
+          <Link href="https://www.bdyana.com/project/sports-entertainment"
             className="pl-3 py-1 flex items-center gap-3 hover:bg-slate-100 duration-300 transition-all dark:text-slate-300 dark:hover:bg-slate-600"
           >
             <Trophy className="text-slate-500" size={16} />

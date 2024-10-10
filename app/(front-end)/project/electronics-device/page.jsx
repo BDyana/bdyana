@@ -2,7 +2,7 @@ import CategoryList from "@/components/frontend/CategoryList";
 import { getData } from "@/lib/getData";
 import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
-export default async function Home() {
+export default async function ElectronicsDevice() {
   const categoriesData = await getData("categories");
   const categories = categoriesData.filter((category) => {
     return category.title === "Electronics Device"});
