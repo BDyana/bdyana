@@ -3,7 +3,6 @@ import React from "react";
 
 export default function ImageColumn({ row, accessorKey }) {
   const imageUrl = row.getValue(`${accessorKey}`);
-  // console.log(imageUrl);
   return (
     <div className="shrink-0">
       <Image
@@ -11,7 +10,7 @@ export default function ImageColumn({ row, accessorKey }) {
         width={500}
         height={500}
         alt={`${accessorKey}`}
-        className="w-10 h-10 rounded-full object-cover"
+        className="w-8 h-8 rounded-full object-cover"
       />
     </div>
   );

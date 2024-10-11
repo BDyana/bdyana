@@ -9,6 +9,5 @@ export default function DateColumn({ row, accessorKey }) {
   const year = originalDate.getFullYear();
 
   const formatted = `${day}th ${month} ${year}`;
-  // console.log(imageUrl);
   return <div className="">{formatted}</div>;
 }
