@@ -122,7 +122,7 @@ export default function RegisterForm({ role = "USER" }) {
           </Link>
         </p>
         {role === "USER" ? (
-l          <p className="text-[0.75rem] font-light text-gray-600 dark:text-gray-400 py-4">
+          <p className="text-[0.75rem] font-light text-gray-600 dark:text-gray-400 py-4">
             Are you a Seller ?{" "}
             <Link
               href="/farmer-pricing"
