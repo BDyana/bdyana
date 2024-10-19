@@ -15,7 +15,6 @@ export default async function page() {
   }
   // Filter By User Id
   const userOrders = orders.filter((order) => order.userId === userId);
-  // console.log(userOrders);
   return (
     <section className="py-12 bg-white sm:py-16 lg:py-4">
       <div className="px-4 m-auto sm:px-6 lg:px-4 max-w-7xl">
