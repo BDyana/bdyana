@@ -4,19 +4,18 @@ import SearchForm from "./SearchForm";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/Logo.png";
-import { HelpCircle, ShoppingCart, User } from "lucide-react";
+import { User } from "lucide-react";
 import ThemeSwitcherBtn from "../ThemeSwitcherBtn";
 import CartCount from "./CartCount";
 import { useSession } from "next-auth/react";
 import UserAvatar from "../backoffice/UserAvatar";
 import ContactInfo from "./ContactInfo";
-import { PhoneCall } from "lucide-react";
+import Script from "next/script";
 export default function Navbar() {
   const { data: session, status } = useSession();
   if (status === "loading") {
     return <p>Loading...</p>;
   }
-
   return (
     <div className="bg-white dark:bg-slate-700 shadow sticky top-0 z-40 w-full backdrop-blur-md">
       <div className="container flex items-center justify-between lg:pt-3.5 pt-0 lg:px-0 px-2 max-w-6xl gap-6 mx-auto">
@@ -63,6 +62,23 @@ export default function Navbar() {
               </div>
           </div>
         </div>
+        <Script id="fb-pixel">
+            {`
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1183341726099321');
+              fbq('track', 'PageView');
+              <noscript><img height="1" width="1" style="display:none"
+              src="https://www.facebook.com/tr?id=1183341726099321&ev=PageView&noscript=1"
+              /></noscript>
+            `}
+        </Script>
     </div>
   );
 }

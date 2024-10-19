@@ -1,6 +1,7 @@
 import Footer from "@/components/frontend/Footer";
 import Navbar from "@/components/frontend/Navbar";
 import React from "react";
+import Script from "next/script";
 
 export default function Layout({ children }) {
   return (
