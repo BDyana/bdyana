@@ -17,6 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta
+          name="facebook-domain-verification"
+          content="pzi59zqi0qrjrv2rbtdiflwivnynhz"
+        />
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>

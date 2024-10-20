@@ -40,7 +40,7 @@ export default async function CategoryGrid() {
                   src={category.imageUrl}
                   alt={category.title}
                 />
-                <p className="lg:mt-3 mt-2.5 line-clamp-1">{category.title}</p>
+                <p className="mt-2.5 line-clamp-1">{category.title}</p>
               </Link>
             );
           })}
