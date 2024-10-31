@@ -16,7 +16,6 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ArenaGrid/>
       <NewProducts />
       <CategoryGrid />
       {categories.map((category, i) => {
@@ -26,6 +25,7 @@ export default async function Home() {
           </div>
         );
       })}
+      {/* <ArenaGrid/> */}
     </div>
   );
 }
