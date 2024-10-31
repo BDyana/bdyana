@@ -43,12 +43,12 @@ export default function SalesInvoice({ order }) {
           <div className="flex justify-between border-b border-gray-500 pb-8">
             <div className="flex flex-col">
               <h2>Bill From:</h2>
-              <p>LimiFood </p>
-              <p>150 Eleign Street</p>
-              <p>Canada</p>
-              <p>sales@limifood.com</p>
+              <p>BDyana.com</p>
+              <p>Uttara, Dhaka</p>
+              <p>Bangladesh</p>
+              <p>info.bdyana@gmail.com</p>
             </div>
-            <Image src={logo} alt="limifood logo" className="w-36 h-24" />
+            <Image src={logo} alt="BDyana logo" className="w-36 h-24" />
           </div>
           {/* Header End */}
           <div className="flex justify-between border-b border-gray-500 py-8">
@@ -77,7 +77,7 @@ export default function SalesInvoice({ order }) {
               </div>
               <div className="flex justify-between gap-4">
                 <p>Amount Due</p>
-                <p>${total}</p>
+                <p>৳{total}</p>
               </div>
             </div>
           </div>
@@ -125,8 +125,8 @@ export default function SalesInvoice({ order }) {
                       </th>
                       <td className="px-6 py-4 truncate">{item.title}</td>
                       <td className="px-6 py-4">{item.quantity}</td>
-                      <td className="px-6 py-4">${item.price}</td>
-                      <td className="px-6 py-4">${itemSubtotal}</td>
+                      <td className="px-6 py-4">৳{item.price}</td>
+                      <td className="px-6 py-4">৳{itemSubtotal}</td>
                     </tr>
                   );
                 })}
@@ -150,15 +150,15 @@ export default function SalesInvoice({ order }) {
             <div className="flex flex-col">
               <div className="flex justify-between gap-4">
                 <p>SubTotal</p>
-                <p>${subTotal}</p>
+                <p>৳{subTotal}</p>
               </div>
               <div className="flex justify-between">
                 <p>Shipping Cost</p>
-                <p>${order?.shippingCost}</p>
+                <p>৳{order?.shippingCost}</p>
               </div>
               <div className="flex justify-between">
                 <p>Total</p>
-                <p>${total}</p>
+                <p>৳{total}</p>
               </div>
             </div>
           </div>

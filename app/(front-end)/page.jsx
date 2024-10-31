@@ -1,6 +1,7 @@
 import CategoryList from "@/components/frontend/CategoryList";
 import NewProducts from "@/components/frontend/NewProducts";
 import Hero from "@/components/frontend/Hero";
+import ArenaGrid from "@/components/frontend/ArenaGrid";
 import { getData } from "@/lib/getData";
 import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
@@ -15,6 +16,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <ArenaGrid/>
       <NewProducts />
       <CategoryGrid />
       {categories.map((category, i) => {
