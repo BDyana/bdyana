@@ -19,7 +19,7 @@ export default async function page() {
   // console.log(userOrders);
   return (
     <section className="py-6 bg-white">
-      <div className="px-4 m-auto max-w-7xl">
+      <div className="px-1 lg:px-2 m-auto max-w-7xl">
         <div className="max-w-6xl mx-auto">
           <div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">

@@ -153,12 +153,12 @@ export default function SalesInvoice({ order }) {
                 <p>৳{subTotal}</p>
               </div>
               <div className="flex justify-between">
-                <p>Shipping Cost</p>
-                <p>৳{order?.shippingCost}</p>
-              </div>
-              <div className="flex justify-between">
                 <p>Total</p>
                 <p>৳{total}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>** Shipping Cost : Inside Dhaka ৳ 70, Outside Dhaka ৳ 130 (First 1 kg)<br/>
+                ৳ 20 Added Next Per Kg.</p>
               </div>
             </div>
           </div>
