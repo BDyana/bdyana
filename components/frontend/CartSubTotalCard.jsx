@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function CartSubTotalCard({ subTotal }) {
-  const shipping = 50.0;
+  const shipping = 0.0;
   const tax = 0.0;
   const totalPrice = (
     Number(subTotal) +

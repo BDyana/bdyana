@@ -140,9 +140,13 @@ export default async function ProductDetailPage({ params: { slug } }) {
               <div>
                 <h3>Delivery Fees</h3>
                 <h5>
-                  Inside Dhaka BDT 60,
+                  <b>Inside Dhaka TK 70,</b>
+                  <br/>
+                  Tk 20 Added Next Per kg
                   <br />
-                  Outside Dhaka BDT 100.
+                  <b>Outside Dhaka BDT 130.</b>
+                  <br />
+                  Tk 20 Added Next Per kg
                 </h5>
               </div>
             </div>

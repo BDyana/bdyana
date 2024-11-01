@@ -113,7 +113,8 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0 " />
                   <div className="">
-                    <p>Delivery inside Dhaka - ৳ 60</p>
+                    <p>Delivery inside Dhaka - ৳ 70 (Per Kg)</p>
+                    <h3>৳ 20 Add Next Per Kg</h3>
                   </div>
                 </div>
                 <Circle className="w-5 h-5 ms-3 flex-shrink-0" />
@@ -135,7 +136,8 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0 " />
                   <div className="">
-                    <p>Delivery Outside Dhaka - ৳ 100 </p>
+                    <p>Delivery Outside Dhaka - ৳ 130</p>
+                    <h3>৳ 20 Add Next Per Kg</h3>
                   </div>
                 </div>
                 <Circle className="w-5 h-5 ms-3 flex-shrink-0" />
