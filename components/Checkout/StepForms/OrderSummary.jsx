@@ -85,9 +85,9 @@ export default function OrderSummary() {
             </div>
             <div className="flex items-center gap-2">
               <div className="flex flex-col justify-center">
-                <h4>${(cartItem.salePrice * cartItem.qty).toFixed(2)}</h4>
+                <h4>৳{(cartItem.salePrice * cartItem.qty).toFixed(2)}</h4>
                 <p className="text-[10px] text-gray-300">
-                  (${cartItem.salePrice}x {cartItem.qty})
+                  (৳{cartItem.salePrice}x {cartItem.qty})
                 </p>
               </div>
             </div>
@@ -106,14 +106,14 @@ export default function OrderSummary() {
               : "1"}{" "}
             days{" "}
           </span>
-          <span>${checkoutFormData.shippingCost}</span>
+          <span>৳{checkoutFormData.shippingCost}</span>
         </div>
       )}
       <div className="flex items-center justify-between border-b border-slate-400  pb-3 font-semibold text-sm mb-4">
         <span>Total</span>
 
         <span>
-          $
+          ৳
           {(
             parseFloat(checkoutFormData.shippingCost) + parseFloat(subTotal)
           ).toFixed(2)}
