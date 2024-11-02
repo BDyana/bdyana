@@ -77,7 +77,10 @@ export default function SalesInvoice({ order }) {
               </div>
               <div className="flex justify-between gap-4">
                 <p>Amount Due</p>
-                <p>৳{total}</p>
+                <p>৳{subTotal}</p>
+              </div>
+              <div className="flex justify-between gap-4">
+                <p><b>+ Delivery Charge</b></p>
               </div>
             </div>
           </div>
@@ -149,16 +152,16 @@ export default function SalesInvoice({ order }) {
             </div>
             <div className="flex flex-col">
               <div className="flex justify-between gap-4">
-                <p>SubTotal</p>
+                <p>Total</p>
                 <p>৳{subTotal}</p>
               </div>
-              <div className="flex justify-between">
+              {/* <div className="flex justify-between">
                 <p>Total</p>
                 <p>৳{total}</p>
-              </div>
+              </div> */}
               <div className="flex justify-between">
-                <p>** Shipping Cost : Inside Dhaka ৳ 70, Outside Dhaka ৳ 130 (First 1 kg)<br/>
-                ৳ 20 Added Next Per Kg.</p>
+                <p>** Shipping Cost : Inside Dhaka ৳ 50, Subarea ৳ 90, Outside Dhaka ৳ 110 (First 1 kg)<br/>
+                (Added 15tk for Dhaka & 20tk for Others for Next Per kg)</p>
               </div>
             </div>
           </div>
