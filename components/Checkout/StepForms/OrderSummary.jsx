@@ -63,7 +63,7 @@ export default function OrderSummary() {
   return (
     <div className="my-6">
       <h2 className="text-xl font-semibold mb-4 dark:text-green-400">
-        Order Summary
+        Order Summary :
       </h2>
       {cartItems.map((cartItem, i) => {
         return (
