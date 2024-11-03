@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
 export default function AddToCartButton({ product }) {
-  const handleAddToCart = () => {
+  const handleClick = () => {
     fbq.event("Purchase", { currency: "USD", value: 10 });
   };
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export default function AddToCartButton({ product }) {
   }
   return (
     <button
-      onClick={() => handleAddToCart()}
+      onClick={() => {handleAddToCart(); handleClick();}}
       className="flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 px-4 py-2 rounded-sm text-white"
     >
       <ShoppingCart size={18} />
