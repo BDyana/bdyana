@@ -6,6 +6,9 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
 export default function AddToCartButton({ product }) {
+  const handleAddToCart = () => {
+    fbq.event("Purchase", { currency: "USD", value: 10 });
+  };
   const dispatch = useDispatch();
   function handleAddToCart() {
     // Dispatch the reducer
