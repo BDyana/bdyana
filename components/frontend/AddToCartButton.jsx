@@ -4,6 +4,7 @@ import { ShoppingCart  } from "lucide-react";
 import React from "react";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
+import * as fbq from "../../lib/fpixel";
 
 export default function AddToCartButton({ product }) {
   const handleClick = () => {
