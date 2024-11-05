@@ -5,8 +5,16 @@ import ArenaGrid from "@/components/frontend/ArenaGrid";
 import { getData } from "@/lib/getData";
 import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
+
+import Link from "next/link";
+import * as fbq from "../../lib/fpixel";
+
 import CategoryGrid from "@/components/frontend/CategoryGrid";
 export default async function Home() {
+
+  const handleClick = () => {
+    fbq.event("Purchase", { currency: "USD", value: 10 });
+  };
   const categoriesData = await getData("categories");
   const categories = categoriesData.filter((category) => {
     return category.title === "Three Pieces" || category.title === "Women Bag" || category.title === "Gadget & Accessories" || category.title === "Men's Shoes" || category.title === "Beauty & Bodycare" || category.title === "Grocery" || category.title === "Wool Thread" || category.title === "Lotions & Creams"});

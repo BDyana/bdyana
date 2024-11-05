@@ -1,7 +1,6 @@
 "use client";
 import { calculateDiscountPercentage } from "@/lib/calculatePercentage";
 import { addToCart } from "@/redux/slices/cartSlice";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +8,14 @@ import React from "react";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
+import * as fbq from "../../lib/fpixel";
+
 export default function Product({ product }) {
+
+  const handleClick = () => {
+    fbq.event("Purchase", { currency: "USD", value: 10 });
+  };
+
   const dispatch = useDispatch();
   function handleAddToCart() {
     // Dispatch the reducer
@@ -57,7 +63,8 @@ export default function Product({ product }) {
               )}
             </div>
           <button
-            onClick={() => handleAddToCart()}
+            type="button"
+            onClick={() => {handleAddToCart(); handleClick();}}
             className="flex items-center hover:bg-gray-100 p-2 lg:p-3 rounded-full text-black"
           >
             <ShoppingCart size={17} />

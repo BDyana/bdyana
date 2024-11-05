@@ -51,9 +51,9 @@ export default async function ProductDetailPage({ params: { slug } }) {
                   </Link>
                 </h4>
               </div>
-              {/*<span>|</span>
+              {/* <span>|</span>
               <div>
-                <p><b>Brand :</b> Brand Name</p>
+              <SalesIndicator sales={product.sales} />
               </div> */}
             </div>
             <div className="border-b border-gray-300">
