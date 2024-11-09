@@ -6,7 +6,7 @@ import GroceryBanner from "../../../../public/banners/GroceryBanner.png";
 import Image from "next/image";
 export default async function Grocery() {
   const categoriesData = await getData("categories");
-  const categories = categoriesData.filter((category) => {
+  const categories = categoriesData?.filter((category) => {
     return category.title === "Grocery" || category.title === "Dry Fruits" || category.title === "Moshla" || category.title === "Supplementary Food"});
   const session = await getServerSession(authOptions);
   return (

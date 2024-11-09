@@ -4,7 +4,7 @@ import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
 export default async function BeautyBodycare() {
   const categoriesData = await getData("categories");
-  const categories = categoriesData.filter((category) => {
+  const categories = categoriesData?.filter((category) => {
     return category.title === "Beauty & Bodycare"});
   const session = await getServerSession(authOptions);
   return (
