@@ -1,4 +1,5 @@
 import LoginForm from "@/components/frontend/LoginForm";
+import LoginWith from "@/components/frontend/LoginWith";
 export default function Login() {
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
@@ -9,6 +10,7 @@ export default function Login() {
               Login to Account
             </h1>
             <LoginForm />
+            <LoginWith />
           </div>
         </div>
       </div>

@@ -5,21 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import Link from "next/link";
-// import { FaGoogle } from "react-icons/fa";
-// import { FaGithub } from "react-icons/fa";
-// import { useSearchParams } from "next/navigation";
-// import { useEffect } from "react";
-// import { getData } from "@/lib/getData";
 export default function LoginForm() {
-  const { data: session } = useSession();
-  if (session) {
-    return (
-      <>
-        <p>Welcome, {session.user.name}</p>
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
-  }
   const router = useRouter();
   const {
     register,
@@ -57,13 +43,6 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 ">
-          <>
-    <p>You are not signed in</p>
-    <div className="flex justify-between">
-      <button className="border border-gray-300 rounded-sm px-5 py-2" onClick={() => signIn("google")}>Login with Google</button>
-      <button className="border border-gray-300 rounded-sm px-5 py-2" onClick={() => signIn("facebook")}>Login with Facebook</button>
-    </div>
-  </>
       <div>
         <label
           htmlFor="email"
