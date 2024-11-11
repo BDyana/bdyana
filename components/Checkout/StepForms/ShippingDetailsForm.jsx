@@ -47,14 +47,14 @@ export default function ShippingDetailsForm() {
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
         <TextInput
-          label="Street Address"
+          label="Street Address (Details)"
           name="streetAddress"
           register={register}
           errors={errors}
           className="w-full"
         />
         <TextInput
-          label="Apt or Unit No"
+          label="Thana or Upazila"
           name="apartment"
           register={register}
           errors={errors}
@@ -68,7 +68,7 @@ export default function ShippingDetailsForm() {
           className="w-full"
         />
         <TextInput
-          label="State"
+          label="District"
           name="state"
           register={register}
           errors={errors}

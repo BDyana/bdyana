@@ -1,15 +1,12 @@
 import CategoryList from "@/components/frontend/CategoryList";
 import NewProducts from "@/components/frontend/NewProducts";
 import Hero from "@/components/frontend/Hero";
-import ArenaGrid from "@/components/frontend/ArenaGrid";
 import { getData } from "@/lib/getData";
 import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
-
-import Link from "next/link";
 import * as fbq from "../../lib/fpixel";
-
 import CategoryGrid from "@/components/frontend/CategoryGrid";
+import HalfBannerOne from "@/components/frontend/HalfBannerOne";
 export default async function Home() {
 
   const handleClick = () => {
@@ -26,6 +23,7 @@ export default async function Home() {
       <Hero />
       <NewProducts />
       <CategoryGrid />
+      {/* <HalfBannerOne/> */}
       {categories.map((category, i) => {
         return (
           <div className="lg:pb-4 pb-2" key={i}>
