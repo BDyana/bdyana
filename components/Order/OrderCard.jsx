@@ -174,7 +174,7 @@ export default function OrderCard({ order }) {
                   Shipping Address: 
                 </p>
                 <p>
-                {order.streetAddress} {order.city} {order.country}
+                {order.streetAddress} {order.apartment} {order.city} {order.state} {order.zip} {order.country}
                 </p>
               </div>
               </div>
