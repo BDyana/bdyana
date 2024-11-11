@@ -19,7 +19,7 @@ export default function HeroCarousel({ banners }) {
       className="rounded-md overflow-hidden"
       wrapAround
     >
-      {banners.map((banner, i) => {
+      {banners?.map((banner, i) => {
         return (
           <Link key={i} href={banner.link} className="">
             <Image

@@ -30,11 +30,9 @@ export default function ShippingDetailsForm() {
   });
   const initialShippingCost = existingFormData.shippingCost || "";
   const [shippingCost, setShippingCost] = useState(initialShippingCost);
-  // console.log(shippingCost);
 
   async function processData(data) {
     data.shippingCost = shippingCost;
-    // console.log(data);
     //Update the checkout Data
     dispatch(updateCheckoutFormData(data));
     //Update the Current Step

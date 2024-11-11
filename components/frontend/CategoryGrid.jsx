@@ -6,14 +6,14 @@ import { MoveRight } from 'lucide-react';
 
 export default async function CategoryGrid() {
   const categoriesData = await getData("categories");
-  const categories = categoriesData.filter(
+  const categories = categoriesData?.filter(
     (category) => category.products.length > 0
   );
 
   const selectRandomCategories = (categories, count) => {
-    let shuffled = categories.sort(() => 0.5 - Math.random());
+    let shuffled = categories?.sort(() => 0.5 - Math.random());
 
-    return shuffled.slice(0, count);
+    return shuffled?.slice(0, count);
   };
 
   const newCategories = selectRandomCategories(categories, 24);
@@ -25,7 +25,7 @@ export default async function CategoryGrid() {
         <Link className="duration-300 transition-all text-slate-800 dark:text-slate-100 rounded-md px-4 flex gap-3 items-center" href={`/category`}>View All<MoveRight size={32} strokeWidth={1.5}/></Link>
         </div>
       <div className="grid lg:grid-cols-8 grid-cols-4 text-center items-center gap-1 lg:px-2 lg:py-2 py-3">
-        {newCategories.length > 0 &&
+        {newCategories?.length > 0 &&
           newCategories.map((category, i) => {
             return (
               <Link

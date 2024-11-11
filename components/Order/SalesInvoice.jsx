@@ -45,8 +45,8 @@ export default function SalesInvoice({ order }) {
               <h2>Bill From:</h2>
               <p>BDyana.com</p>
               <p>Uttara, Dhaka</p>
-              <p>Bangladesh</p>
               <p>info.bdyana@gmail.com</p>
+              <p><b>Helpline:</b> 01511-309 309</p>
             </div>
             <Image src={logo} alt="BDyana logo" className="w-36 h-24" />
           </div>
