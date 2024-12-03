@@ -130,13 +130,13 @@ export default function LoginForm() {
       </div>
 
       <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-        Already have an account?{" "}
+        New customer?{" "}
         <Link
           href="/register"
           className="font-medium text-blue-600 hover:underline dark:text-blue-500"
         >
-          Sign Up
-        </Link>
+          Register
+        </Link> here
       </p>
     </form>
   );
