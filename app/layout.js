@@ -22,6 +22,10 @@ export default function RootLayout({ children }) {
           name="facebook-domain-verification"
           content="pzi59zqi0qrjrv2rbtdiflwivnynhz"
         />
+        <meta
+          name="google-site-verification"
+          content="MZrG05ej8tcAbK1d7W9RCA9JTHIG5Z8zdz_EHKMycfI"
+        />
       </head>
       <body>
         <Providers>{children}</Providers>
